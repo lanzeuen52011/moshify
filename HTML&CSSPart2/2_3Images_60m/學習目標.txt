@@ -1,0 +1,17 @@
+Learn
+1.Image types and format
+2.Background images
+3.Css sprites
+4.Data URLs
+5.Clipping images
+6.Applying filters
+7.Support high-density screens(像是APPLE的視網膜顯示Retina display)
+8.Resolution switching
+9.Using modern image formats(WebP)
+10.Art direction
+11.Scalable Vector Graphics(SVG)
+12.Icon fonts
+
+
+
+

@@ -1,0 +1,14 @@
+
+
+1.build form
+2.style form
+3.text field
+4.data lists
+5.drop-down lists
+6.check boxes
+7.radio button
+8.sliders
+9.file inputs
+10.hidden field
+11.data validator
+12.submitting forms

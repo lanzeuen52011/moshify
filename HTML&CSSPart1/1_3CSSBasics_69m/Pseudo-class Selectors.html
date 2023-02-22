@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/ProvidingCSS.css" />
+  </head>
+  <body>
+    <article>
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <a href="#">Link</a>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+      </ul>
+    </article>
+  </body>
+</html>
+
+<!--
+
+Pseudo-class Selectors
+  解析：選擇Chrome內的自動生成的class，因此也沒有自定義的必要。
+    1.article :first-child{}，選擇article第一個子階做CSS調整。
+      優點是便利好用，缺點是脆弱，意因移動或新增而導致定義目標改變。
+    2.article :first-of-type{}，選擇不同屬性中的第一個子階做CSS調整，範例如下：
+      <article>
+        <h2>Heading</h2> *會被調整，為h2種類第一個為article的子階。
+        <p>Lorem ipsum dolor sit amet.</p> *會被調整，為p種類第一個為article的子階。
+        <p>Lorem ipsum dolor sit amet.</p>
+      </article>
+    3.article p:first-of-type{}，指定<p>種類的article下的第一個打的那行字做CSS調整。
+    4.article p:last-of-type{}，指定<p>種類的article下的最後一個打的那行字做CSS調整。
+    5.article p:last-child{}，指定<p>種類的article下的最後一個子階做CSS調整。
+    6.ul li:nth-child(odd){}，指定<li>種類的odd(單數)進行CSS調整。
+      a.odd(單數)
+      b.even(全部)
+      c.3n(選擇<li>中的第三個)
+    7.a:visited{}，被點入過的網址，進行CSS調整。
+    8.a:link{}，沒被點入過的網址，進行CSS調整。
+    9.a:hover{}，當鼠標滑到<a>上面時，進行CSS調整。
+      此可調整<a>以外的東西，只需將"a"替換掉即可。
+    10.a:focus{}，當<a>被選取，但未被點入時，進行CSS調整。
+
+
+    縮寫用法：ul>li*5{Item $}變成以下
+                  <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                  </ul>
+    
+
+
+
+
+
+
+
+
+
+
+
+-->

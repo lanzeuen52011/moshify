@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      tfoot {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Expense</th>
+        </tr>
+        <tr>
+          <th>Category</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Marketing</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>Accounting</td>
+          <td>$200</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total</th>
+          <th>$300</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
+
+<!--
+表單部分(tables)
+    記住table僅限於表格。
+
+        1.tables(HTML部分,table,部分固定式表單(表格),表格行tr)
+            a.是table的大項目，以tr來建立table中的小項目，而tr可以建立表格，其中又分為頭與身體，為了讓程式更符合語意與搜尋引擎優化。
+                i.thead(TablesHeader,thead>tr>th)標題項目組,th意指為TableHead，資料類別
+                ii.tbody(TablesBody,tbody>tr>td)項目資料組,td意指為TableDatacell，資料表格
+                iii.tfoot(TablesFoot,tfoot>tr>th)
+                    *th預設為粗體並置中對齊，td為正常並靠左對齊
+                    *<th colspan="n">Expense</th> colspan跨度or跨維度，可將資料類別跨n欄位
+                    *text-align: left; 靠左對齊
+        2.tables(CSS部分)
+            a.border(邊界)
+                用法：(此須三個值)
+                border: "thickness單位是px" "style of border線條樣式" "線條顏色"
+                *如果想要一次table外框跟tabledatacell一起擁有表格線條的話，直接"table, td{CSS程式碼}"即可
+            b.border-collapse: collapse;表格框線合體
+            c.padding: 5px;縮排
+            d.<th colspan="n">Expense</th> colspan跨度or跨維度or跨欄，可將資料類別跨n欄位
+            e.text-align: left; 靠左對齊
+
+
+DRY:
+    Don't Repeat Yourself ，不要做重複的事情。
+
+
+
+
+
+
+
+-->

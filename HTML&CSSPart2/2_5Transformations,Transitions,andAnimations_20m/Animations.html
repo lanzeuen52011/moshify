@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_5Transformations,Transitions,andAnimations_20m/Animations.css"
+    />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="box animation-pop">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>
+
+<!--
+Animations
+    1.指令集
+        A.@keyframes
+            @keyframes pop{
+                0%{
+                    transform: scale(1);
+                }
+                25%{
+                    transform: scale(1.3);
+                }
+                50%{
+                    transform: rotate(45deg);
+                    background: tomato;
+                }
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
+            解析：建立一個動畫名稱叫做pop，當時間進行到0%時 scale(1)，當時間進行到25%時scale(1.3)，當時間進行到50%時rotato(45deg)
+                    和background:tomato，當時間進行到100%時rotato(0deg)
+
+            .box{
+                animation-name: pop;
+                animation-duration:4s ;
+            }
+            解析：@keyframe設定完後，再到需要放動畫的物件輸入animation-name: 動畫名稱;與animation-duration:時間;，即完成。
+        B.animation-delay: 1s;
+            解析：延遲1s。
+        C.animation-iteration-count: infinite(或者輸入2讓動畫重複1次);
+            解析：此動畫無限重複
+        D.animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            解析：使動畫有淡出(ease-out)淡入(ease-in)等效果。
+        E.animation-direction: alternate;
+            解析：從100%開始撥放至0%
+        F.animation: name duration timing-function delay iteration-count direction fill-mode;
+            解析：也可直接依此指令設定全部，不設定者刪除即可。
+
+
+
+ Reusable Animations
+    1.直接將animation變成class即可套用到所有需要動畫的物件上(AB需同時存在)
+        A.CSS部分
+            .animation-pop{
+                animation-name: pop;
+                animation-duration:4s ;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            解析：將Animation部分加入到class。
+        B.HTML部分
+            <div class="box animation-pop">Lorem ipsum dolor sit amet.</div>
+            解析：將加入Animation的class套入到div的class裡，即可使動畫連結。
+    2.參考網站：
+            https://animate.style/
+            處理流程： 開啟網站 -> 將Installing底下的add it directly to your webpage using a CDN:裡面的link複製到head ->
+                        並將class="animate__animated animate__動畫效果"加到要放動畫的class裡面，即完成。
+
+
+            
+
+
+
+
+
+
+
+
+
+
+-->

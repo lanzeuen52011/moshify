@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="description" content="..." />
+    <title>Document</title>
+    <style>
+      em {
+        color: red;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading 1</h1>
+    <h2>HTML</h2>
+    <p>HTML tutorial</p>
+    <h3>Code</h3>
+    <p>Exercise</p>
+    <h2>CSS</h2>
+    <p>CSS tutorial</p>
+    <p>I love to learn <em>HTML</em>!</p>
+    <!--em的用法在於強調，字會變成斜體(斜體可用CSS調整掉)，此可以讓搜尋引擎摘錄此重點-->
+    <p>I love to learn &lt;HTML&gt;&copy;!</p>
+    <!--"&lt;"與"&gt;"：的用法在於，想呈現"<HTML>"時，HTML會自動把"<HTML>"變成"<HTML></HTML>"，
+        因此需要"&lt;"與"&gt;"來讓HTML知道，我要在網頁上看到"<HTML>"，而非將其當作"<HTML></HTML>"的指令段落-->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+      voluptatem tempora. Eum beatae corrupti ea pariatur hic, ipsa repellat
+      commodi recusandae vero explicabo itaque saepe alias officiis cum? Ipsam
+      tempore rerum eius&nbsp;recusandae quam ab adipisci quis deserunt
+      dignissimos ipsum, numquam cum quidem maxime beatae. Corrupti quidem
+      laborum magni harum.
+    </p>
+    <!-- "lorem單字數",此功能會自動生產單字數段落，若須測試功能，可以此來實驗。 -->
+  </body>
+</html>
+
+<!--
+基礎開頭 
+    1.只要輸入"!"並按下tab鍵，就會跑出html所需的全部元素
+
+META的語法部分
+    1.charset,character(字母、文字)
+        character(字母)是依照ASCII(American Standard Code for Information Interchange)的編碼跑出來的
+    2.viewport(視覺輸出，統稱"視圖、視區")
+        筆電、桌電、手機、IPAD等等的裝置與設備觀看的大小不同，因此需依靠"viewport"來進行設置。
+    3.kw,keyword(關鍵字)
+        用在搜尋引擎優化(SEO)，便於讓搜尋引擎快速找到此網站，只是目前這個功能已不再被重視，但仍可使用。
+    4.desc,description(描述、敘述)
+        在搜尋引擎時，標題底下的小字即為此。例如：google搜尋 Apple 底下則會出現一段敘述與描述
+
+字體的部分
+    1.em,emphsis(強調)
+        字會變成斜體(斜體可用CSS調整掉)，此可以讓搜尋引擎摘錄此重點。
+    2.i,italic(斜體)
+        字體會變成斜體，但是基本上不會用到，因為精美設計應當於CSS執行，而非HTML。
+    3.strong(非常重要、非常緊急)
+        字會變成粗體(租體可用CSS調整掉)，規則上類似於em(強調)，用法則是個人決定。
+    4.b,bold(粗體)
+        字體會變成粗體，但是基本上不會用到，因為精美設計應當於CSS執行，而非HTML。
+
+打包到縮寫(Wrap with Abbreviation)
+    選取想把包的段落 -> View -> Commend Palette -> Wrap with Abrrviation
+
+Heading用法(hierarchy:等級制度)
+    1.h1~h6分別為最重要至最不重要，每種程度字體大小不同，但不得依照字體大小而作為使用依據，應以重要等級作為使用區分，因字形體等都以CSS設計。
+    2.其中h1僅能存在一個，因為搜尋引擎需分辨何者為"最重要！"
+
+在網頁上的呈現
+    1."<n>"的效果
+        &lt;"與"&gt;"：的用法在於，想呈現"<HTML>"時，HTML會自動把"<HTML>"變成"<HTML></HTML>"，
+        因此需要"&lt;"與"&gt;"來讓HTML知道，我要在網頁上看到"<HTML>"，而非將其當作"<HTML></HTML>"的指令段落
+    2."©"的效果(此符號意指為版權聲明，用意為提醒訪客網站內容受版權保護)
+        &copy;：加在自己想加的地方。
+    3.符號參考網站
+        其他的符號也可以靠此網站找出，https://tools.w3cub.com/html-entities
+    4."lorem50"段落文章生產(拉丁文)
+        "lorem單字數",此功能會自動生產單字數段落，若須測試功能，可以此來實驗。
+        例如：lorem50，以lorem為開頭生產50個單子的段落。
+    5."&nbsp;"段落破壞者
+        意指將想連在同一段，卻被分開者，可於他們之間輸入此，可使他們變成在同一行。
+
+
+以上重點分為兩點
+1.視覺及解碼
+2.HTML如何將文本設置重點，以便搜尋引擎萃取重要資訊(SEO)。
+
+
+-->

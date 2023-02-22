@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/2_4Forms_55m/FileInputs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--File Inputs 檔案上傳
+        <form>
+          <input type="file" accept="image/*" />
+        </form>
+    -->
+    <!--Grouping Related Fields 連結相關的並產生領域
+    <form>
+      <section>
+        <h2>Bill Address</h2>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </section>
+      <fieldset>
+        <legend>Payment</legend>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </fieldset>
+    </form>
+    -->
+    <form>
+      <input type="hidden" name="coures-id" value="1234" />
+    </form>
+  </body>
+</html>
+
+<!--
+File Inputs
+    1.指令集：
+        A.file檔案上傳
+            a.<input type="file" />
+                解析：使檔案上傳
+            b.<input type="file" multiple />
+                解析：使可上傳多個檔案
+            c.<input type="file" accept=".jpg" />
+                解析：僅可上傳".jpg"類型的檔案。
+            d.<input type="file" accept="image(video,audio)/*" />
+                解析：使可上傳圖片(影片或者音效)檔案。
+
+Grouping Related Fields
+    1.指定集
+        A.<legend>Bill Address</legend>
+            解析：集體團體的標籤。
+        B.基礎要素(以下兩者皆可)：
+            a.基礎1.
+            <fieldset>
+                <legend>Bill Address</legend>
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+            </fieldset>
+            解析：此為fieldset基礎要素。其中fieldset可用section替代，legend可用h2等替代。
+            b.基礎2.
+            <section>
+                <h2>Bill Address</h2>
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+            </section>
+
+Hidden Fields 隱藏領域
+    1.指令集：
+        A.<input type="hidden" name="coures-id" value="1234" />
+            a.此功能為，回傳給伺服器時，告訴伺服器這是甚麼東西。(僅限用在被編輯過的內容)
+
+
+
+
+
+
+
+
+
+-->

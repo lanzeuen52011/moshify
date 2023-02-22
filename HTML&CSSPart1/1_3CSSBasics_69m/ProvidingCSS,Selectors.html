@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--
+    <style>
+      /*內嵌式CSS
+      p {
+        
+        color: orange;
+      }
+      */
+    </style>
+    -->
+
+    <!--分離式CSS-->
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/ProvidingCSS.css" />
+
+    <!-- ID化CSS
+    <style>
+      #first {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+    -->
+    <section id="product">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <article>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </article>
+    </section>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </head>
+  <body>
+    <!-- 同行CSS
+    <p style="color: blue; font-weight: bold">Lorem ipsum dolor sit amet.</p>
+    -->
+
+    <!--ID化CSS
+    <p id="first">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    -->
+    <a href="https://google.com" target="_blank">Google</a>
+  </body>
+</html>
+
+<!--
+ProvidingCSS
+    1.Embedding內嵌式CSS：
+        直接將程式碼輸入到與頁面同一個檔案
+        範例如下：
+        [
+        <style>
+        p { /*內嵌式CSS*/
+        color: orange;
+        }
+        </style>
+        ]
+        缺點：無法一次調整多個頁面
+    2.Separating分離式CSS：
+        將程式碼輸入於CSS專用檔案，以便後續整理。
+        範例如下：
+        <link rel="stylesheet" href="/1_3CSS Basics(69m)/ProvidingCSS.css" />
+        rel是relationship(關聯)和"href"resource(來源)。
+
+        link是屬於self-closing元素，意指會自己讀完後關閉的元素。
+        <link /> <--自我關閉元素
+        <link></link> <--正常元素
+    3.InLine同行CSS：
+        將程式碼置於同一行內，以便區隔。
+        範例如下：
+        <p style="color: blue; font-weight: bold">Lorem ipsum dolor sit amet.</p>
+        缺點：這樣程式碼很醜不好看。
+    4.ID化CSS：
+        給予想調整的文字一個ID
+        範例如下：
+        <style>
+        #first {
+            color: blue;
+            font-weight: bold;
+        }
+        </style>
+
+        <p id="first">Lorem ipsum dolor sit amet.</p>
+        
+        比InLine更實用。
+
+NormalizeCSS (通常都是選擇ID、元素、CLASS，其他的基本不會用到。)
+    1.section
+        簡寫用法：
+            a.ID:指令#ID
+            b.CLASS:指令.CLASS
+            ID與CLASS的差別在於，ID擁有單一性，但CLASS可有很多個。
+        HTML部分    
+            section#product => <section id="product"></section>
+        CSS部分
+            #product
+
+    Normalize CSS參考網站：
+    https://necolas.github.io/normalize.css/
+
+BasicSelectors
+    1.包含("*=")"google"字樣者
+            用法： href*="google";
+            可使用此功能，一次修飾有包含google的網址。
+    2.開頭("^=")
+            用法：href>="https";
+            一次修飾開頭於https的網址。
+    3.結尾("$=")
+            用法：href$=".com";
+            一次修飾開頭於.com的網址。
+
+Relational Selectors
+    1.一次性修改ID(product)底下的"東西(p)"，(#product p{})
+            以此為範例，若要選擇<p>，則可用#product p{}，一次性修改ID:product底下的所有<p>
+            <section id="product">
+                <p>Lorem ipsum dolor sit amet.</p>
+                    <article>
+                        <p>Lorem ipsum dolor sit amet.</p>
+            </section>
+    2.只修改降一子階之"東西"，(#product > p{})
+            將"#product p{}"改成"#product > p{}"，僅多一個">"
+    3.將此ID後的下一項"東西"做調整。(#product + p{})
+    4.將此ID後的全部"東西"做調整。(#product ~ p{})
+
+總結以上ReationalSelectors的特點：
+            1.cleaner markup：可使我們不用指定單一ID，優點。
+            2.can be fragile：脆弱的，只要稍微移動順序，條件就不符合了。
+            3.not as fast as basics selectors：執行得比BasicSelector還慢一點點，屬於人分不出來的那種慢。
+                舉例：#product ~ p{}
+                    程式會先將所有<p>讀過一遍，再找出ID是Product的<p>，才做選擇。
+
+            4.過早的優化，是萬惡的根源。(Premature optimization is the root of all evils)
+            總結建議：建議是非常確定程式碼不會再做更動了才使用ReationalSelectors。
+
+
+                
+
+
+
+
+
+
+
+    -->

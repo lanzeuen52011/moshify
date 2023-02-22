@@ -1,0 +1,23 @@
+CSS peek
+    只要按下Ctrl並點選在HTML想要知道的class，就會自動超連結到CSS去。
+
+Code Runner
+    點選開始箭頭，即可自動開始。
+
+Prettier
+    編碼美化，可與他人統一。
+    File -> Preferences -> Setting -> 搜尋"format on save" -> 將 Editor:format on save 打勾 ->
+
+Live Server
+    可以即時看到自己的code在網站上實行的樣子
+
+HTML CSS Support
+    幫助在HTML Coding時，可以快速找到在CSS存在的class
+
+Highlight Matching Tag
+    會幫忙標註此程式碼的開頭與結尾在何處。
+
+TODO Highlight
+    在CSS /* TODO: */ 或者 /* FIXME: */，會有顏色可以註記。
+
+

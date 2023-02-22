@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/FloatingElements.css" />
+  </head>
+  <body>
+    <article class="tweet clearfix">
+      <div class="avatar"></div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div class="clear"></div>
+    </article>
+  </body>
+</html>
+
+<!--
+FloatingElements(此實務上不時用，因為這個難以維護byMosh)
+    1.float: left;
+        使得其他的東西也會跟著在他旁邊，此處的left，是指本體物件在左邊，剩餘的則在右邊，即使是div這種blockelement也可以跟著改變。
+        *****float元素會被父母階元素無視，就像是relative一樣，因此段落需要像是div一樣的block元素，才能解決因被無視導致設計崩壞的問題。
+            但又因為只為了設計崩壞的因素生成div，導致程式毫無邏輯可言，因此可於tweet後面增加一個block元素即可。
+            例如：
+            .clearfix::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            為此目的而生的CSS，盡量用同一種class來寫，來規避REPEAT YOURSELF這個原則，此範例為為了修飾tweet而生成block元素，
+            但後續又有需求，因此將tweet另外生成一個class叫做clearfix，以此來便利後續相同問題的解決動作。
+    2.clear
+        若float為left，則clear為left，因為有float元素在左邊。
+        舉例：
+        .clear{
+            clear: left;
+        }
+        若兩邊都有float則可使用both，或者直接使用，這樣也不用去想哪邊有float。
+        舉例：clear:both;
+
+
+
+
+
+
+
+    
+-->

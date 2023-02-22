@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/2_3Images_60m/CSSSprites.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span class="bg-dishes"></span>
+    <span class="bg-landing"></span>
+    <span class="bg-rocketship"></span>
+    <span class="bg-saturn"></span>
+    <span class="bg-ufo"></span>
+    <img
+      src="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"
+      alt=""
+      class="meal"
+    />
+  </body>
+</html>
+
+<!--
+CSS Sprites CSS精靈
+    用意：一個網站有成千上萬個圖片又有成千上萬的使用者，使用這個可將成些許的HTTP需求集中到一個圖片中，然後使伺服器只接收到一個HTTP需求。
+    1.參考網站
+        A.向量圖片下載：https://www.flaticon.com/
+        B.將大量的HTTP需求，集中到一個圖片中 https://cssspritestool.com/
+            使用流程：到網頁 -> 上傳圖片 -> Image File Type:PNG, CSS Class Prefix:bg- -> Generate CSS Sprite，即可下載，接著
+                -> 解壓縮 -> 將PNG放到專門蒐集圖片的資料夾 -> 並打開壓縮檔中的css檔，將其複製到自己的CSS檔 -> 接著，
+                並且變更url至自己電腦的路徑 -> span."圖片的class" -> 跑出圖片即完成。(這樣客戶端只會送出一個HTTP需求，減少伺服器與客戶端的下載負擔)
+            *切記
+                a.但切記不要把大量的圖片放入同一個檔案裡，因為檔案會過大，造成反效果。 file size can get too large
+                b.Sprites不具彈性，因此若需要調整其資料量，需重新生成一個新的Sprites。 Sprites are not flexible
+                c.因此通常此僅用在小型圖片(small img or icon)
+
+Data URLs 資料連結
+  用意：減少HTTP的需求發送與接收。
+    1.參考網站：
+      A.https://www.cssportal.com/image-to-data/ 如果不能用了，就去Google搜尋Data URI(或者URL) Generator。
+        優點：若電腦已有跑過網站或者擁有過檔案，就會使客戶端不會再重複下載同一個檔案，以增加客戶端的體驗與速度。
+        缺點：
+          a.轉換後的檔案，比內嵌檔案還大，因此沒有轉換的必要。
+          b.且只會把事情複雜化，因為如果要更換圖片，就得重新Generate一次
+          c.行動裝置的體驗大大降低，因為URL的載入會使得行動裝置的載入時間拉長，導致使用者體驗降低。
+        處理流程： 開啟網站 -> 上傳圖片 -> 把Image Tag下載下來 -> 貼上，即完成。
+
+Clipping 剪接圖片
+  用意：剪接
+    1.參考網站：
+      A.https://bennettfeely.com/clippy/
+        處理流程： 開啟網站 -> 點選想要的圖形(或者調整到想要的) -> 底下的clip-path那行複製起來，貼到CSS 。
+
+Filters 在圖片中篩選(篩選各項顏色等)
+  用意：
+    1.指令集：
+      A.grayscale
+        filter: grayscale(70%); 使灰階
+      B.blur
+        filter:blur(3px); 使模糊
+      C.contrast
+      D.brightness
+      E.saturate
+    2.PSEUDO-CALSS SELECTORS
+      A.:hover 鼠標碰到
+      B.:active 啟動
+      C.:visited 已參訪過
+    3.參考網站
+      https://developer.mozilla.org/en-US/docs/Web/CSS/filter 可以搜尋css filter function
+      處理流程：選擇一個filter效果
+                
+
+
+
+
+
+
+
+
+-->

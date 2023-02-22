@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/MeasurementUnits.CSS" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, consequatur!
+    </div>
+  </body>
+</html>
+
+<!--
+Measurement Units測量單元
+    1.width:50%;
+        content使用父母單元的50%
+    2.height: 100vh; (viewport height)
+        佔垂直單元100%
+    3.width:50vw; (viewprot width)
+        佔水平單元50%
+    4.width: 10em;(element)
+        字體的10倍空間，若此階沒有定義大小則會取父母階，若父母階也沒定義，則取html預設的16px，換而言之此為160px。
+        缺點：要一直往上階找字體大小，會搞得很複雜，因此推薦使用rem。
+    5.width: 10rem;(rootelement)
+        直接使用預設的字體大小來算倍數，以便於計算。預設值為16px。換而言之此為160px。
+        *改動預設字體大小：
+        html{
+            font-size: 62.5%;
+        }
+        就會變成是 16px*62.5%=10px ，此時的10rem就會變成 10px*10=100px。
+    使用rem或em，即使使用者的預設字體是除了中以外的也可以正常顯示。 
+
+
+
+
+
+    
+-->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/Positioning.css" />
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box box-one"></div>
+      <div class="box box-two"></div>
+      <div class="box box-three"></div>
+    </div>
+  </body>
+</html>
+
+<!--
+Positioning
+    1.div
+        a.沒設定高度時，高度等於0。
+    2.class="class1 class2";
+        class可以設定一個以上的class參數。
+    3.position，預設都是static
+        a.relative，相對於NormalPosition的位置，此移動方式不影響其他物件。
+            舉例：
+            {
+            position: relative;
+            left:5rem;
+            }
+            使得物件本身的左邊多5rem的空間，若是數字為負數(-4)，則會將物體根據原本的位置往左偏移，就相等於right:4rem。
+        *****若是父母階為relative，子階為absolute，子階會被父母階拋棄，因此父母階為relative時，子階僅限relative。
+        b.fixed;固定
+            將物件固定於veiwport的某處，可固定於top:0;，就像是導覽一樣。
+    4.x,y,z-index(x,y,z軸層)圖層調整(z)
+        a.表現形式為三次元，x為水平軸，y為垂直軸，z為圖層軸。
+    5.width:auto;
+        當父母階已將大小設定好了，若子階將width設定為auto，那麼子階將依照auto讓瀏覽器去自動判斷大小。
+
+
+
+
+
+
+-->

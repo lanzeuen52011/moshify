@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/HTML&CSSPart2/SizingElements.css" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+  </head>
+  <body>
+    <span class="box"></span>
+    <span class="box"></span>
+  </body>
+</html>
+
+<!--
+Sizing Elements
+    一般來說width指的是content的內容大小，因此若要改成設定其他的大小時，可以使用，
+    1.box-sizing: border-box; 把width要調整的目標從content改成border，這樣一來就可以限制border以下的東西最多包涵width設定的px。
+        *可使用"*(任意指令)"來使得所有使用一個指令的width都是針對border以下的內容(border必須存在)。
+        例句：
+        "* {
+            box-sizing: border-box;
+        }"
+
+    2.若要針對一個指令外的width進行調整，需另外加入。例如想針對關於 box::afer或者 box::before的指令類別，則用*::after和*::before。
+        舉例：
+        *,*::after,*::before {
+            box-sizing: border-box;
+        }
+    3.區塊元素與行內元素的區別
+        a.blockelement區塊元素
+            會直接用掉一整行，整個區塊都用掉。
+        b.inlineelement行內元素
+            有字才使用空間。
+        c.inline-block行內區塊元素(除使用display以外，正常並不存在)
+            一般來說只有分ab，因此可使用display來改變元素。
+            屬於有寫才有元素，且可以是區塊用的。
+            例句：
+            display: inline-block;
+
+            若兩程式碼如範例a所示，則會產生些微空間來區隔，若為b，則無空格。
+            範例a.
+                <span class="box"></span>
+                <span class="box"></span>
+            範例b.
+                <span class="box"></span><span class="box"></span>
+
+
+    
+
+
+
+
+
+
+
+
+    
+-->

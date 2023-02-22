@@ -1,0 +1,43 @@
+<!-- 圖片課程-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="/HTML&CSSPart1/1_2HTMLBasics(64m)/images/coffee.jpg"
+      alt="three cup of coffee"
+    />
+  </body>
+</html>
+
+<!--
+視覺部分
+
+
+壹.圖片部分
+    1.圖片參考網站(免費)：
+        https://unsplash.com/
+
+
+    2.img部分(HTML)
+        A.alt(替代文字)：
+            雖然此非強制性輸入，但輸入對於搜尋引擎有極大的幫助，如以下幾點：
+                a.使得頁面變得更便於搜尋，具有搜尋性，因此需設立一個有意義且代表性的文字。
+                b.使搜尋引擎更能理解此網站提供的重點是甚麼。
+                c.如果圖面無法被載入，則以替代文字告訴訪客此為何，即使訪客斷線了，也仍然能知道這裡放的東西是甚麼。
+    3.img的部分(CSS)
+        A.object-fit: cover; 
+        可使圖面不因像速限制而破壞圖內比例。
+        例外：除了cover以外還有很多可以用，可於chrome中打開檢查，找到img有src的那段，變可在style中調整成其他效果，可即時判斷效果合適與否。

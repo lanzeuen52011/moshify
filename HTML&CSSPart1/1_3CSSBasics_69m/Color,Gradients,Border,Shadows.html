@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/ProvidingCSS.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>Heading</h1>
+    </div>
+  </body>
+</html>
+
+<!--
+顏色調整(color)
+    方法：
+        1.顏色的名子Named colors
+        2.RGB(A)
+            舉例：background-color: rgba(230, 205, 16, 0.5);
+                除了RGB以外，可以加入A(Algha)，調整關於透明度(transparent)部分，僅能輸入0~1。
+        3.HSL(A)(色相、飽和度、亮度、(透明度))
+            舉例：background-color: hsla(54, 53%, 40%,0.5);
+        4.Hexadecimal(十六進制色碼轉換)
+            關於數字顏色系統：
+                A.Binary(二進制)：0,1
+                B.Deciaml(十進制)：0~9
+                C.Hexadecimal(十六進制)：0~9,a~f
+            例句：background-color: #e6cd10;
+
+參考網站：
+    1.顏色選擇：Google搜尋"colorpicker"
+    2.漸層程式碼產生器：https://cssgradient.io/
+    3.形狀程式碼參考：https://css-tricks.com/the-shapes-of-css/
+
+漸層(Gradients)
+    概念：漸層是一種"image"，因此在設定時千萬不要使用background-color，應使用background或者background-image。
+    1.linear-gradient(線性漸層)
+        舉例：
+        A.正常(由上而下)：background: linear-gradient(dodgerblue,yellow) ;
+        B.往右(由左而右)：background: linear-gradient(to right,dodgerblue,yellow) ;
+        C.往右下(由左上往右下)：background: linear-gradient(to bottom right,dodgerblue,yellow) ;
+        D.往右上(由左下往右上)：background: linear-gradient(45deg,dodgerblue,yellow) ;
+        E.往右上(由左下往右上)，但黃色以外的區域為30%：background: linear-gradient(45deg,dodgerblue,yellow 30%) ;
+        F.往右上(由左下往右上)，但有三個顏色的漸層：background: linear-gradient(45deg,dodgerblue,yellow,tomato) ;
+
+    2.radial-gradient(向量漸變)
+        舉例：
+        A.由內而外的向量漸層：background: radial-gradient(white,yellow) ;
+        B.由內而外的圓形漸層：background: radial-gradient(circle,white,yellow) ;
+        C.由左上而右下的圓形漸層：background: radial-gradient(circle at top left ,white,yellow) ;
+        
+
+
+邊界(Border)
+    1.border: 線條粗細 線條型態 線條線色;
+        A.10像素、直線條、忠誠藍：border: 10px solid royalblue;
+        B.10像素、點狀線、忠誠藍：border: 10px dotted royalblue;
+        C.10像素、虛線、忠誠藍：border: 10px dashed royalblue;
+    2.border-top(top、right、left、bottom):
+        A.20像素、直線條、忠誠藍：border-top: 20px solid royalblue;
+        *只要他的讀取是在其他的border前面，此處的指令就無效。
+    3.border-width: 上 右 下 左 的線條粗細。
+        A.border-width: 10px 20px 10px 20px;
+        B.border-width: 10px 20px ;
+            *即使下與左的值不存在，程式仍會直接以對面的像素來替代(上對下、左對右)。
+    4.border-radius:圓化像素
+        A.圓化30像素：border-radius: 30px;
+        B.若圖片為正方形，此會將圖片變成圓型：border-radius: 100%;
+
+陰影(Shadows)
+    1.box-shadow:往右幾個像素 往下幾個像素 柔化幾個像素 顏色
+        A.往右10像素 往下10像素：box-shadow: 10px 10px;
+        B.往左10像素 往下10像素 灰色：box-shadow: -10px 10px gray;
+        C.往左10像素 往下10像素 柔化10像素 灰色：box-shadow: -10px 10px 10px gray;
+        D.正中間 柔化10像素 散開 灰色：box-shadow: 0px 0px 10px 10px gray;
+    2.text-shadow:往右幾個像素 往下幾個像素 柔化幾個像素 顏色
+        A.往左5像素 往下5像素 柔化10像素 灰色：text-shadow: 5px 5px 10px gray;
+        B.往左5像素 往下5像素 柔化10像素 黑色(0.2能見度)：text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);陰影最佳解
+
+
+
+
+
+
+
+
+
+
+
+-->

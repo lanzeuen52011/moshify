@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/Grid.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-one">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+    </div>
+  </body>
+</html>
+
+<!--
+Grid 矩陣排版(網狀排版、格狀排版，例如IG的搜尋)
+    1.定義一個Grid
+        a.首先需要用一個container
+            I.display:grid
+            II.grid-template
+                i.grid-template(列/欄)
+                    例句：grid-template: repeat(3,100px)/ repeat(2,100px) ;
+                    參數解析：grid-template: repeat(幾個水平列,垂直長度)/ repeat(幾個垂直欄,水平長度) ;
+                ii.grid-template-rows(幾列，水平的)
+                    例句：grid-template-rows: repeat(3,100px);
+                    參數解析：grid-template-rows: repeat(幾個水平列,垂直長度);
+                iii.grid-template-columns(幾欄，垂直的)
+                    例句：grid-template-columns: repeat(2,100px);
+                    參數解析：grid-template-columns: repeat(幾個垂直欄,水平長度);
+                iv.若於長度部分輸入"%"的話，抓出來的長度非container的長度，而是扣除絕對數值的可用空間乘上%，
+                    公式：(空間-絕對數字設定的空間)*%=此欄or列的空間。
+                    因此若要輸入%，更建議輸入fr(fraction of the available space)，
+                    例如：grid-template-columns: 30fr 70fr;
+                v.填滿(會根據瀏覽器看到的頁面大小來調整自己的大小)
+                    例如：grid-template-columns: auto;
+            III.Gap
+                i.row-gap
+                    例句：row-gap: 10px;
+                    參數解析：row-gap: 列間細大小;
+                ii.column-gap
+                    例句：column-gap: 10px;
+                    參數解析：column-gap: 欄間細大小;
+                iii.gap
+                    例句1：gap:間細大小
+                    例句2：gap:列間細大小 欄間細大小
+            IV.Grid
+                i.grid-row
+                    例句1：grid-row: 2/4;
+                    參數解析：grid-row: 第二欄/(到)第四欄;
+                    例句：grid-row: 2/ span 2;
+                    參數解析：grid-row: 第二欄/(到)span的兩欄;2+2=4，因此此為第四欄
+                ii.grid-column
+                    例句1：grid-column: 1/3;
+                    參數解析：grid-column: 第一欄/(到)第三欄;
+                    例句2：grid-column: 1/-1;
+                    參數解析：grid-column: 第一欄/(到)最後一欄;
+                    例句3：grid-column: 1/ span 2;
+                    參數解析：grid-column: 第一欄/(到)span的兩欄; 以三欄為例則到第三欄
+                iii.grid-area
+                    例句：grid-area: 1/1/span 2/span 2;
+                    參數解析：grid-area: 開始的列/開始的欄/跨2列/跨2欄;
+                    解析：這個只會用在有grid-template-areas且要放置其中Item的時候才會用到。
+
+                    *因此此範例會先建立grid-template-areas，在解釋grid-area。
+                    範例一：
+                        舉例：   grid-template-areas: 
+                                    "header  header" 
+                                    "sidebar main" 
+                                    "footer  footer";
+                        參數解析：grid-template-areas: 
+                                    "第一列第一欄的名稱  第一列第二欄的名稱" 
+                                    "第二列第一欄的名稱  第二列第二欄的名稱" 
+                                    "第三列第一欄的名稱  第三列第二欄的名稱";
+                        舉例：   grid-area: header;
+                        參數解析：grid-area: grid-template-areas設定的名稱(不可加上""，否則會失效);
+                    *區域名稱可以從devltool上看得到，將grid點開後，點選layout，再點選show area name。
+
+
+                    
+
+Aligning Item 對齊項目 (此會限制欄位大小)
+    以下1.與2.預設皆為stretch(緊密，意指中間無縫隙，除非有限置item的大小。)
+    1.justify-items(水平軸)
+        例句：justify-items:center;表格內水平置中對齊。
+    2.align-items(垂直軸)    
+        例句：align-items:center;表格內垂直置中對齊。
+    3.justify-content(整個表格在Container中的水平軸)
+        例句：justify-content: center;表格在Container中水平置中對齊。   
+    4.align-content(整個表格在Container中的垂直軸)
+        例句：align-content: center;表格在Container中的垂直軸
+    
+
+
+
+
+
+
+
+一般的網頁架構
+Head
+side
+content
+foot
+-->

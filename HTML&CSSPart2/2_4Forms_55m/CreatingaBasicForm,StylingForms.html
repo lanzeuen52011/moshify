@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_4Forms_55m/CreatingaBasicForm.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+      <button type="submit">Register</button>
+      <button type="reset">Clear</button>
+    </form>
+  </body>
+</html>
+
+<!--
+Creating a Basic Form 創造表格
+  1.指令集
+      A.label標籤 (inline element)
+          例句：<label for="name">Name</label>
+           參數解析：<label for="連結">標籤名稱</label>
+           解析：形成一個標籤並與input連結。
+       B.input輸入表格
+           例句：<input id="name" type="text" />
+           參數解析：<input id="連結" 類型="文字(或者其他類型text,email)" />
+           解析：形成一個文字表格，並與label連結。
+       C.button按鈕
+           例句：<button type="submit(reset)">Register</button>
+           參數解析：<button 類型="送出(重置)">名子</button>
+           解析：使以上input資料，在button被按下時執行"類型"。
+
+Styling Forms 調整表格
+  1.指令集
+    A.(CSS)label
+      例句：input[type="text"]{}
+      參數解析：input[類型="文字"]{}
+      解析："[]"內為指定類型。
+    B.(CSS)選擇時的框限
+      例句：
+            input[type="text"]:focus,
+            input[type="email"]:focus{
+                border-color: #7db0fb;
+                outline: 0;
+                box-shadow: 0   0   0   4px rgba(24, 117, 255, 0.25) ;
+            }
+      解析：選擇到text與email的類型時，框線變成#7db0fb的顏色，並且出現淺藍色陰影。
+    C.transition動畫
+      例句：transition:border-color 0.15s, box-shadow 0.15s ;
+      參數解析：transition:效果1 時間長度、時間單位, 效果2 時間長度、時間單位 ;
+
+
+
+
+
+
+
+
+-->

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="FlexBox.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box-one">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+  </body>
+</html>
+
+<!--
+FlexBox (Flexible Box Layout) 條狀排版，例如致裡的橫向排版
+    1.display: flex; (使得排版以橫向方式展示，並且使內部以flex呈現，但對外還是以block呈現)
+        一般來說沒經過特別排版的程式碼，通常是以垂直的方式呈現。
+        a.flex-direction: row;
+            橫向展示，flex預設值。
+        b.flex-direction: column;
+            直向展示。
+        c.flex-direction: column-reverse;
+            倒序直向展示。
+        
+
+AXES(軸)
+    1.軸向分為
+        a.Main(primary)
+        b.Cross(secondary)
+    2.軸向
+        a.ROW:Main水平、Cross垂直。
+        b.COLUMN：Main垂直、Cross水平。
+
+Alingning Item的兩種屬性(property)
+    1.justify-content分佈對齊(along the main axis)
+        a.justify-content: center;置中對齊
+        b.justify-content: end(start);置尾(首)對齊
+        c.justify-content: space-evenly;分散對齊
+        d.justify-content: space-between;分開對齊(首尾在最極端的位置)
+    2.align-items交錯軸單行對齊(along the cross axies)
+------------以下為另外提及，非屬性----------
+    3.align-item:center;非以上之屬性(垂直置中對齊)
+        a.flex-wrap: wrap;
+            一般來說flex會將過多的物件壓縮在同一個區域。導致物件表示被壓縮，因此需要此來解決此問題，並使其換行。
+            *但會導致垂直部分無置中，因此需"align-content:center;"
+            
+    4.align-self: start(end);可將指定的物件移動至此物件的開始(結束)的上端。
+
+
+Sizing Item
+    以下均為Item Properties應用在flexitem上，而非flexcontainer。
+    1.flex-basis(the initial size of a flex item)
+        設定flex物件的使用空間。
+    2.flex-grow(the growth factor)長
+        此會使得瀏覽器去蒐集所有的因子為多少，在依照設定的因子量分配，如box1:2 box2:1，這樣box1就會被分配到66.67%的空間。
+        例句：flex-grow:1;(成長因子：1)
+    3.flex-shrink(the shrink factor)縮
+        如同規則growth，但參數與grow相反，如box1:0 box2:1，這樣box1就不會被壓縮到任何空間，換句話說就是「壓縮的空間*因子」
+        ，grow也亦同。
+    4.flex
+        用法參數：flex:(flex-grow) (flex-shrink) (flex-basis);括弧內請輸入(數字,1)(數字,1)(數字與單位,15rem)
+
+
+
+
+
+
+
+
+-->

@@ -1,0 +1,13 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 10px;
+}
+.box{
+    /*50% of the width of the parent */
+    width: 10rem;
+    height: 100vh;
+    background-color: gold;
+}

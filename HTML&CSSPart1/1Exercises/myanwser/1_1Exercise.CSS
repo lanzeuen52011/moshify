@@ -1,0 +1,27 @@
+th{
+    background-color: #427fef;
+    color: white;
+    padding: 5px;
+    text-align: left;
+}
+
+
+tr:nth-child(odd){
+    background-color: #eef7ff;
+}
+
+td{
+    padding: 5px;
+}
+
+tr,thead{
+    border:1px solid  #c4dcf3;
+    border-width: 1px 0px 1px 0px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 18% ;
+}
+
+

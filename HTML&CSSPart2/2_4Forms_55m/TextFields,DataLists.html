@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/2_4Forms_55m/TextFields.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" list="countries" autocomplete="off" />
+      <datalist id="countries">
+        <option data-value="1">Australia</option>
+        <option data-value="2">Canada</option>
+        <option data-value="3">India</option>
+        <option data-value="4">United States</option>
+      </datalist>
+    </form>
+  </body>
+</html>
+
+<!--
+Text Fields
+    1.指令集
+        A.input
+            a.<input type="number" />
+                解析：使得此格僅能輸入數字。
+            b.<input type="password" />
+                解析：使得此格為密碼，輸入之文字會變成原點而非文字。
+            c.<input type="date" />
+                解析：使得此格為日期。
+            d.<input type="email" / value="lanzeuen52011@gmail.com"  >
+                解析：直接打上value
+            e.<input type="email" placeholder="Email" />
+                解析：打之前可以看到上面有Email字樣來提示輸入人，輸入東西就會消失。
+            f.<input type="email" readonly />
+                解析：使此欄唯讀，但可選。
+            g.<input type="email" disabled />
+                解析：使不能選，但可以看得到，且此value不會被送到sever。
+            h.<input type="email" maxlength="5" />
+                解析：使最多5個字(全半形都算一個字)
+            i.<input type="email" autofocus />
+                解析：使一進入此網站，便自動focus此欄。常用在註冊或登入。
+            j.<textarea>Comment...</textarea>
+                解析：使textarea的value為Comment...
+        B.textarea
+            a.<textarea cols="30" rows="10"></textarea>
+                解析：每行容納30個字母，可有10行
+                    *可用textarea{resize: none;} 來讓窗格無法被調整大小。
+Data Lists
+    1.指令集
+        A.下拉式清單
+            a.  <input type="text" list="countries" />
+                <datalist id="countries">
+                    <option data-value="1">Australia</option>
+                    <option data-value="2">Canada</option>
+                    <option data-value="3">India</option>
+                    <option data-value="4">United States</option>
+                </datalist>
+                解析：使得user在填寫時，可透過選擇或者自己打字來填入答案。其中data-value使得伺服器端收到資料時，可以歸檔。
+            b.<input type="text" list="countries" autocomplete="off" />
+            c.例外
+                如果要改動list，需要到網路上搜尋html datalist element，到https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist，來查看。
+
+
+
+
+-->

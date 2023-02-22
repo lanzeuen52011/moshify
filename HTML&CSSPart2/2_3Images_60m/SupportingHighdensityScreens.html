@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_3Images_60m/SupportingHighdensityScreens.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"
+      alt="A bowl of salmon and curry"
+      class="meal"
+      srcset="
+        /HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg    1x,
+        /HTML&CSSPart2/2_3Images_60m/images/images/meal@2x.jpg 2x,
+        /HTML&CSSPart2/2_3Images_60m/images/images/meal@3x.jpg 3x
+      "
+    />
+  </body>
+</html>
+
+<!--
+Supporting High-density Screens
+    用意：茲因各設備之解析不同，因此需有不同的展現方式。
+        1.方法
+            A.Physical Resolution(960*640)
+                從像素方面直接性的處理。
+            B.Logical Resolution(480*320)
+                以像素480*320為基礎的比例性展示。
+            C.Device Pixel Ratio(DPR) (2)
+                依照設備比例來決定顯示的比例，簡易來說就是480*320的幾倍來算。
+            D.High Density Screen (DPR>1)
+        2.圖片處理
+            A.Photoshop
+                處理流程：載入圖片 -> image -> Image size -> 調整到圖片想展示的最小像素的三倍(此次舉例為400px，要生產3個 3x 2x 1x) -> 
+                            儲存"檔案名@3x.jpg" -> 品質可選到7，可獲得大量壓縮，且品質不差的圖片。
+        3.指令集
+            A.srcset
+                用法：srcset="
+                        /HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg    1x,
+                        /HTML&CSSPart2/2_3Images_60m/images/images/meal@2x.jpg 2x,
+                        /HTML&CSSPart2/2_3Images_60m/images/images/meal@3x.jpg 3x
+                            "
+                    並去CSS設定width:此次顯示最小的px;
+                參數解析：srcset="圖片來源 螢幕顯示倍率"
+                解析：如果螢幕顯示倍率是1x，就使用meal.jpg，螢幕顯示倍率是2x就使用meal@2x.jpg,螢幕顯示倍率是3x就使用meal@3x.jpg。
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+-->

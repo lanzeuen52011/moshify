@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_5Transformations,Transitions,andAnimations_20m/Transformations.css"
+    />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+  </head>
+  <body>
+    <div class="box">Lorem ipsum dolor sit amet.</div>
+  </body>
+</html>
+
+<!--
+Transformations 變化(物件轉場)
+  1.指令集
+    A.rotate(); 旋轉
+        transform: rotate(15deg); 使物件向右選轉15度，負數即向左。
+    B.scale(); 放大縮小
+        transform: scale(1.5); 使物件放大1.5倍。
+    C.skew(); 傾斜
+        transform: skew(15deg); 使物件向左傾斜15度。
+    D.translate(); 移動
+        transform: translate(10px,10px); 使物件向右向下移動10px
+        *不用relative的原因有兩點：
+            a.可能會誤導他人或使他人不懂該如何進行維護
+            b.此移動效果較優於其他移動的方式
+    E.多種動作
+      transform: rotate(45deg) translateX(50px);使物件向右選轉45度且向右移動50px
+      *物件轉場的前後順序會影響到物件最後停留的位置。
+
+3D Transformations *此功能必須含有perspective才能啟動，建議放在父母階，可使所有子階共享同一個觀點(perspective)
+  1.指令集
+    A.translateZ
+      transform:perspective(200px) translateZ(50px); 使Z軸產生200px的空間，並使得物件向我們靠近50px
+      
+    B.rotateY
+      transform: perspective(200px)  rotateY(50deg); 使Z軸產生200px的空間，並使物件以3D的方式旋轉
+      transform-origin: 0 50%; 使得原點固定在左邊，導致配合上列旋轉時，左邊將會固定
+
+Transitions
+  1.指令集
+    A.transition: transform 0.5s;
+      在原box位置打上此指令，參數為：transition: 動畫(過場) 花費時間 ease-in(淡入，或者ease-out等其他效果);
+    B.transition: transform 0.5s cubic-bezier();
+      參考網站，https://cubic-bezier.com/#.25,.1,.25,1，cubic-bezier()的參數可於網站中參考。
+    C.transition: transform 0.5s linear 1s;
+      後面多的1s為延遲1秒。 #延遲 #暫等
+
+
+
+
+
+
+-->

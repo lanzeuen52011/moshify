@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My first Web page</title>
+    <style>
+      /* 這段style是寫CSS */
+      /*這是CSS的註解 */
+      img {
+        width: 100px; /*圖片大小 : 像素*/
+        border-radius: 50px; /*圓邊 : 像素*/
+        float: left; /*圖片放左邊*/
+        margin-right: 10px; /*邊距空間-右邊:像素*/
+      }
+      .username {
+        font-weight: bold; /*字型:粗體*/
+      } /* 因下方有把 RaidenShogun 用 class 命名為"username"，因此可以直接使用 .username */
+    </style>
+  </head>
+  <body>
+    <img src="images/228536393.gif" alt="Ei" />
+    <p class="username">Raiden Shougun</p>
+    <!--文字-->
+    <!--其中的class="username"，是將其命名為username
+        ，因此若需針對此行進行變動，只需 ".username{}"-->
+    <p>321</p>
+    <!--img有兩個特點，第一只有開頭，不需要結尾，第二不會有任何子階程式-->
+    <!-- 頭  註解為  尾-->
+  </body>
+</html>
+
+<!--
+修飾篇
+    1.Pretier fomat 的用法: View -> Commend Palette -> format document 
+    2.儲存並自動修飾程式：可以到 File -> Preferences -> Setting -> 搜尋"format on save" -> 找到並打勾 Format a file on save.等等的一堆英文 
+
+自動偵錯
+    1.HTML:可以到https://validator.w3.org/的 Validate by File Upload 上傳自己的檔案就可以偵錯了
+    2.CSS: https://jigsaw.w3.org/css-validator/
+
+
+-->

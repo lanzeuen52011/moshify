@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <!--一般的CSS編輯-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <!--自動修飾(表單)-->
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_6WritingClean,MaintainableCSS/CSSBestPractices.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--CSS Best Practices實務上需注意
+    <nav class="nav">
+      <a href="#" class="brand">My Website</a>
+      <ul class="items">
+        <li class="nav-item item">Link 1</li>
+        <li class="nav-item item">Link 2</li>
+        <li class="nav-item item">Link 3</li>
+      </ul>
+    </nav>
+    -->
+    <!--Object-oriented CSS
+    <div class="one"></div>
+    <div class="two"></div>
+    -->
+    <header class="hero">
+      <button class="btn btn-primary">Sign Up</button>
+    </header>
+    <aside class="side-bar">
+      <botton class="btn btn-secondary">Contact</botton>
+    </aside>
+  </body>
+</html>
+
+<!--
+CSS Best Practices
+    1.8個實用小技巧
+
+        I.一致的命名法則 Follow a naming convention consistently
+            a.Kebab Case
+                例句：.nav-bar
+                解析：使用dash "-"來命名。
+            b.Camel Case
+                例句：navBar
+                解析：此處為lower camel case，意旨大寫並非在首位，導致像駱駝的駝峰。
+            c.Pascal Case
+                例句：Navbar
+                解析：此處為upper camel case，意旨首位為大寫。
+            d.Snake Case
+                例句：nav_bar
+                解析：使用underscore "_"底線來命名。
+
+        II.有邏輯的來區分程式區塊 Create logical section in your stylesheet
+            a.明確的區塊別(以下範例為CSS)
+            /* Basic styles */
+
+            *{
+                box-sizing: border-box;
+            }
+            html{}
+
+            /* Typography */
+            h1,h2,h3{}
+
+            /* Form */
+            /* Navigation Bar */
+
+            b./* Basic style */ 這區就寫基本的調整，如字形字體等。
+
+        III.過多條件使選擇緊縮 Avoid over-specific selectors
+            a.css部分，請以範例2.或3.取代範例1.，不要讓程式寫的太緊縮。
+                範例1.
+                    div.nav > ul.items > li {}
+                範例2.
+                    .nav .item {}
+                範例3.
+                    .nav-item{}
+            b.html部分
+                可使用Ctrl+Alt+↓來選取一同編輯的部分。
+        IV.避免使用!important Avoid !important
+            a.會使用到!important，僅代表你其他地方的code打錯了，且使用此會讓選擇條件緊縮。
+
+        V.Sort CSS properties
+            a.Sort Lines Ascending
+                使程式碼較易閱讀。
+                處理流程： 將.nav-item{}的{}內的內容選取 -> Ctrl+Shift+P -> 搜尋Sort Lines Ascending -> 選擇即完成。
+            範例1.處理前
+                .nav-item{
+                    color: tomato;
+                    width: 100%;
+                    background: #fff;
+                    font-weight: bold;
+                }
+            範例2.處理後
+                .nav-item{
+                    background: #fff;
+                    color: tomato;
+                    font-weight: bold;
+                    width: 100%;
+                }
+        VI.共同屬性寫在父母階即可繼承 Take advantage of style inheritance
+            a.如果.brand和.item都要使用font-family，便直接將font-family寫在父母階的.nav即可。
+
+        VII.重複利用程式碼 Extract repetitive patterns
+        
+        VIII.Avoid repetitive values(Keep it DRY)
+            a.DRY(Don't Repeat Yourself)
+
+Variables
+    1.var()
+        解析：先將變數設定在:root，後續使用時，var(設定好的變數)，即可使用。
+        範例1.
+            .one{
+                background: #ffdd36;
+            }
+            .two{
+                background: #ffdd36;
+            }
+        範例2.
+            :root{
+                --color-primary: #ffdd36;
+                --border-size:2px;
+                --border-radius:10px;
+            }
+
+
+
+            .one{
+                background: var(--color-primary);
+            }
+            .two{
+                background:var(--color-primary);
+            }
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+-->

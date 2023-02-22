@@ -1,0 +1,108 @@
+<!-- 超鏈結課程-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="company/about.html">About Me</a>
+    <a href="images/228536393.gif" download>RaidenShogun</a>
+    <a href="#section-css">CSS</a>
+    <a href="https://google.com" target="_blank">Google</a>
+    <a href="mailto:lanzeuen52011@gmail.com">Email me</a>
+    <h2>HTML</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+      aperiam consequatur maxime odio necessitatibus ducimus odit! Harum,
+      voluptatum! Nobis deserunt ex quos officia nisi facilis, consequatur
+      accusamus ipsa magnam ipsum impedit atque assumenda cum ea animi ab
+      exercitationem magni, iste distinctio ducimus quisquam reprehenderit.
+      Voluptas tempore fugit nam ratione, obcaecati nesciunt rem inventore
+      laudantium beatae nobis, reiciendis a. Nostrum illum eaque similique. Ipsa
+      odio vero, eius, et consequatur molestiae, magnam dolorem ducimus unde
+      sint suscipit iste accusantium temporibus iusto! Impedit ab sunt tempore
+      quia dicta, dignissimos earum sint perferendis, modi fugiat ducimus eos
+      voluptatibus eum ipsa amet! Sed, ratione illo. Voluptas tempore sequi enim
+      unde ducimus nam, eos molestias animi in, doloremque excepturi nesciunt
+      placeat laudantium. Eaque repudiandae nulla nobis cupiditate quam, vitae
+      incidunt ab, quas tempore molestias nostrum nemo. Aspernatur odio vitae, a
+      deserunt cupiditate qui accusantium provident eveniet velit quibusdam nam?
+      Optio in consequuntur unde doloremque possimus explicabo temporibus velit
+      tempora eligendi consequatur dolores, officia ipsam corrupti modi adipisci
+      dignissimos accusantium asperiores vero aspernatur ipsa natus. Commodi
+      blanditiis ratione, rerum consequuntur, similique impedit voluptas enim
+      placeat cupiditate non, omnis eius assumenda adipisci! Doloremque
+      obcaecati earum quam animi deleniti, nemo sint dolore, possimus
+      dignissimos commodi molestias, ipsa vitae doloribus!
+    </p>
+    <h2 id="section-css">CSS</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsum
+      quisquam temporibus qui placeat rerum deserunt? Atque expedita libero
+      ducimus nesciunt ipsam voluptate quos beatae, aliquam reiciendis eligendi
+      accusantium nulla quas dolore repellat amet, saepe quidem! Minima dicta
+      voluptas corporis omnis ut dolorum ex assumenda, eum error itaque.
+      Excepturi cum debitis mollitia, cupiditate dolores placeat reprehenderit
+      illo voluptatum praesentium ipsa ad recusandae voluptates deleniti dolorem
+      expedita veritatis eius vero nulla facilis commodi? Quibusdam, eum
+      architecto? Qui obcaecati omnis provident, doloribus autem illo, odio
+      temporibus sapiente modi dolore minus impedit, quibusdam praesentium totam
+      minima aperiam nostrum. Corporis sint nisi, totam officiis dolore cum
+      dolorum rem distinctio velit tenetur hic, fuga commodi doloribus iure
+      quaerat in enim itaque magni atque, neque sunt reprehenderit. Dolor
+      consequuntur iure officiis, sint, dicta accusamus expedita molestias fugit
+      necessitatibus ex amet quia debitis culpa consequatur. Earum nulla magnam
+      rerum fuga voluptate minus est modi, adipisci dolorum inventore libero
+      voluptatem quam ratione, dolore perferendis, doloremque eaque reiciendis
+      maxime impedit aliquid nemo exercitationem provident deserunt! Ipsa,
+      accusamus quas quo repellat, ipsam nihil delectus cumque saepe sapiente
+      dicta iure. Alias tenetur, officia delectus dolor qui quo modi! Soluta
+      inventore, deleniti et impedit a quam voluptas facilis tempora est hic
+      odit!
+    </p>
+    <a href="#">Jump to top</a>
+  </body>
+</html>
+
+<!--
+
+超連結
+Link與HyerLink不同之處：
+    1.Link：只是一個URL的地址，顯示的是地址
+        舉例：這是一個link:https://www.parkersoftware.com
+    2.HyerLink(超鏈結)：是一個可以引導使用者到目標頁面，顯示的是地址以外的內容。
+        舉例：這是一個hyperlink: Parker Software homepage
+
+Href與src不同之處：
+    1.Href:網頁上的超鏈結或路徑。
+    2.src:直接將檔案內嵌至網頁上。
+
+    超鏈結課程
+    1.a,anchor(錨點、超連結)
+        A.a(錨點)內必須包含 "href(hypertext reference)"，"href"就是url、link，可是此處被點選時，傳送到另一個網頁。
+            用法：<a href="連結" target="_blank">文字或者圖片</a>
+            解析：點擊圖片或文字時會另外開啟新的網頁， target="_blank"會另外開啟新視窗。
+        B.同頁索引
+            用法：(ab兩者必須同時存在，c則不用)
+                a.索引者<a href="#section-css">CSS</a>
+                b.被索引者<h2 id="section-css">CSS</h2>
+                解析：將被索引者設立一個id，在去錨點處用#id，即可完成同頁索引。
+
+                c.自我索引<a href="#">Jump to top</a>
+                解析：只有"#"則直接回到網頁最上端。
+
+                
+
+    2. .. or /回上一層
+        例如：此處要寫從about.html回到index1.html，需要回到上階資料夾，則須輸入 "../"這樣就可以選擇index1.html
+        或者是用 "/"直接做選擇。
+    3. download 下載
+        1.直接下載
+            <a href="images/228536393.gif" download>RaidenShogun</a> 
+            用法：<a href="被下載的檔案" download>顯示的文字或圖片</a> 
+            點擊RaidenShougun後:直接下載"images/228536393.gif
+    
+-->

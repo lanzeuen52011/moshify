@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/HTML&CSSPart2/2_4Forms_55m/TextFields.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/34a071c796.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    <form> Data Validation 資料驗證
+      <input type="number" required min="3" max="10" />
+      <button type="submit">Submit</button>
+    </form>
+    -->
+    <form action="https://formspree.io/f/xayzobqn" method="post">
+      <input type="text" placeholder="Name" name="name" />
+      <input type="text" placeholder="Email" name="email" />
+      <button type="submit">
+        <i class="fas fa-alert"></i>
+        Submit
+      </button>
+    </form>
+  </body>
+</html>
+
+<!--
+Data Validation
+    1.資料驗證
+        A.Required field
+            a.<input type="text" required minlength="3" maxlength="10"/>
+                解析：此格為必填(required)，且最少三個字，最多10個字。
+        B.Emails
+            解析：會自動偵測是否含有"@"，若無則無法送出。
+        C.Numbers
+            a.<input type="number" required min="3" max="10" />
+                解析：此數值僅能填入3~10之間。
+        D.Dates
+    2.指令集：
+        A.必填
+            <input type="text" required />
+                解析：此格為必填(required)。
+Submitting the Form
+    1.button
+        A.<button type="submit">Submit</button>
+            解析：此種可加入icon。
+        B.<input type="submit" value="submit" />    
+            解析：這個就不能用icon，僅能變換字樣。
+        C.<form action="" method=""></form>
+            解析：action為應當傳送到何處的url，method為如何傳送到url
+                於表單中常用post，其中的get較適用於查詢。
+    2.Sever-side technologies伺服器端技術
+        A.Node/Express 來自Javascript
+        B.Django 來自Python
+        C.ASP.NET 來自C# 
+        D.Laravel 來自PHP
+        E.Ruby on Rails 來自Ruby
+        F.參考網站：
+            a.formspree.io (自動生成後端免費的)
+            b.帳號：lanzeuen52011@gmail.com
+            c.密碼：956956520Aa@2
+            d.處理流程： 
+                    I.使此處的前端連接到formspree的後端：
+                        開啟網站 -> 登入 -> 選擇"+"的圖示 -> form -> 輸入名稱 -> 複製Your form's endpoint is:的url -> 
+                        貼到form的action -> 在action=""的旁邊再加上method="post(或者get)" -> 
+                        在將input的部分新增name="(自己寫一個，如果是name就寫name)" -> 再去輸入資料並送出 -> 
+                        若跳出Thanks，即正常。
+                            ***其中post比較常用於表單，且會顯示在request，而get則用於查詢，會將資料放在url以便於定位。
+                    II.查看填寫資料
+                        開啟網站 -> 登入 -> 點選想查看的表單 -> 點選Submissions -> 可以看到誰填了
+
+
+
+
+
+
+
+
+
+-->

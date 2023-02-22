@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/NormalizeCSS.css" />
+    <link rel="stylesheet" href="/1_3CSS Basics(69m)/CSS/ProvidingCSS.css" />
+  </head>
+  <body>
+    <article>
+      <h1 id="products" class="highlight">Heading</h1>
+    </article>
+    <p>Lorem ipsum <strong>dolor</strong> sit amet.</p>
+  </body>
+</html>
+
+<!--
+Selectors Specificty部分
+
+    讀取優先順序：程式會優先讀取獨特性高的參數，其順序如下：
+        ID(獨特辨識，單一性)>CLASS、ATRRIBUTE(類別，區別性)>ELEMENT(元素，無區別性)
+            *強制讀取優先：在參數後面加個"!important"
+        舉例如下：
+        1.原碼
+            ELEMENT(最後讀取，讀取權限大小：0,0,1)
+            h1{
+            color: red;
+            }
+
+            CLASS(第二順位，讀取權限大小：0,1,0)
+            .hightlight{
+            color: brown;
+            }
+
+            ID(優先讀取，讀取權限大小：1,0,0)
+            #products{
+            color: aqua;
+            }
+        A:因此字會變成水藍色，因為ID會被優先採用。
+
+        2.加入!important，但因此會打亂程式的讀取順序，因此不建議使用此語法，建議使用增加選擇條件的方式，來調整順序[來"3."這邊]。
+            ELEMENT(最後讀取)
+            h1{
+            color: red !important;
+            }
+
+            CLASS(第二順位)
+            .hightlight{
+            color: brown;
+            }
+
+            ID(優先讀取)
+            #products{
+            color: aqua;
+            }
+        A:因為ELEMENT有加入"!important"，因此即使ELEMENT是最小的權限，程式也會優先讀取ELEMENT，因此字體為紅色。
+
+        3.加入更多的selector(選擇條件)
+            a.#products.highlight{}，此讀取權限為(1,1,0)，因此優先於僅有ID的權限。
+
+        4.繼承(Inheritance)
+            1.繼承範例
+            例句：<p>Lorem ipsum <strong>dolor</strong> sit amet.</p>
+                若在CSS寫<p>的顏色為藍色，則不須另外寫strong變成藍色，茲因<p>為<strong>之父母階，因此<strong>會繼承<p>的設定。
+            2.拒絕繼承
+                則可在CSS另外設定<strong>的CSS調整參數。 例如：strong{color:initial;}      
+            3.部分繼承
+                則可在CSS將未被繼承到的調整參數，設定為繼承。邊界不會被繼承，因此設定為，例如： strong{border:inherit;}        
+
+
+
+
+        
+
+    
+
+
+
+
+
+
+
+
+
+-->

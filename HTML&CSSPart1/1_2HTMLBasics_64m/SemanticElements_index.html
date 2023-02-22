@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article class="article">
+      <h1>Heading</h1>
+      <p>
+        Published <time datetime="2022-02-11 18:09">Feberary 11 06:09pm</time>
+      </p>
+      <p>
+        <mark>Lorem</mark> ipsum, dolor sit amet consectetur adipisicing elit.
+        Provident laboriosam soluta dignissimos minima iusto. Quasi placeat,
+        excepturi, doloribus odio voluptate possimus consequuntur sit illo
+        deserunt iusto dolores rerum soluta laudantium laborum neque, ullam sed
+        sint suscipit dignissimos nam cum dicta ipsum! Maiores odio dignissimos
+        natus voluptate distinctio enim id voluptatibus!
+      </p>
+      <figure>
+        <img src="" alt="" />
+        <figcaption>My coffee in this mornning</figcaption>
+      </figure>
+    </article>
+  </body>
+</html>
+
+<!--
+Container有分兩種
+
+    1.Generic共通的：
+        A.<div>
+        B.<span>
+
+    2.Semantic語義的：
+            A.<article>
+                意指個別、自我的內容，任何能自成內容的都是article，且可告訴搜尋引擎這是有文章意思的，不須一定要是文章，它可以是：
+                    a.論壇貼文(Forum Post)
+                    b.留言Comment)
+                    c.評論(Review)
+                    d.產品介紹卡(Product Card)
+            B.<figure>
+                單純只能存放數據，其中不會包含有任何文字。
+                a.figcaption(數據標題)
+            C.<mark>
+                    a.上堂課要個別標註顏色須要另外寫CSS。
+                        <style>
+                            .highlight {
+                             background-color: yellow;
+                        }
+                        <span class="highlight">Lorem</span>
+
+                    b.用上mark只需要
+                        <mark>Lorem</mark>
+
+                    c.以上為同樣效果的程式碼。
+            D.<time>
+                茲因程式碼不會分辨文本與時間的差別，因此須另外使用time來告訴程式，這段表示的是時間。
+                例如： <p>Published Feberary 11 06:09pm</p> 其中的"Feberary 11 06:09pm"，看就知道是時間，可是程式不知道，因此須改成
+                        <p>Published <time>Feberary 11 06:09pm</time></p>，將時間部分包裹並標註給程式看。
+                datetime ="YYYY-MM-DD hh:mm"，此可用在另外追加，使得程式更能理解。
+
+
+
+
+
+
+
+
+-->

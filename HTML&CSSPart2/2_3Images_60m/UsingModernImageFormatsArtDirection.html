@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_3Images_60m/UsingModernImageFormats.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    <picture
+      ><source
+        type="Image/webp"
+        srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal.webp"
+      />
+      <source
+        type="Image/jpeg"
+        srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"
+      />
+      <img
+        src="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"
+        alt="A bowl of salmon and curry"
+      />
+    </picture>
+    -->
+    <picture>
+      <source
+        media="(max-width:500px)"
+        srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal-cropped.jpg"
+      />
+      <source
+        media="(min-width:501px)"
+        srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"
+      />
+      <img src="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg" alt="" />
+    </picture>
+  </body>
+</html>
+
+<!--
+Using Modern Image Formats 
+    1.Conversion to webp
+        A.Photoshop(WebPShop plug-in)
+        B.Sketch
+        C.Online tools(cloudconvert.com/jpg-to-webp)
+        D.Command-line tools
+    2.參考網站：
+        圖片轉檔網站：https://cloudconvert.com/jpg-to-webp 
+    3.指令集：
+        A.picture>source
+            <picture>
+            <source
+                type="Image/webp"
+                srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal.webp"/>
+            <source
+                type="Image/jpeg"
+                srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"/>
+            <img
+                src="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"
+                alt="A bowl of salmon and curry"/>
+            </picture>
+            a.參數解析：
+                <picture>
+                <source
+                    type="Image/檔案類型"
+                    srcset="檔案來源"/>
+                <img
+                    src="檔案來源"
+                    alt="替代文字"/>
+                </picture>
+                
+
+Art Direction
+    1.指令集
+        A.使得圖片在縮小時以被剪裁的方式顯示
+            <picture>
+                <source
+                    medie="(max-width:500px)"
+                    srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal-cropped.jpg"
+                />
+                <source
+                    medie="(min-width:501px)"
+                    srcset="/HTML&CSSPart2/2_3Images_60m/images/images/meal-cropped.jpg"
+                />
+                <img src="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg" alt="" />
+            </picture>
+
+            參數解析：
+            <picture>
+                <source
+                    medie="(最大邊長小於500px)"
+                    srcset="檔案來源1"
+                />
+                <source
+                    medie="(最小邊長大於501px)"
+                    srcset="檔案來源2"
+                />
+                <img src="檔案來源2" alt="" />
+            </picture>
+
+            
+    
+        
+
+
+
+
+
+
+
+
+
+-->

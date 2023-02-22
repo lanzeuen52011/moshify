@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_4Forms_55m/DropdownLists.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <select>
+        <optgroup label="front-end Courses">
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JavaScript</option>
+        </optgroup>
+        <optgroup label="back-end Courses">
+          <option value="1">Node.js</option>
+          <option value="2">ASP.NET</option>
+          <option value="3">Django</option>
+        </optgroup>
+      </select>
+    </form>
+  </body>
+</html>
+
+<!--
+Drop-down Lists
+    1.指令集
+        A.下拉式選單
+            a.預設為Select a Course...
+                <form>
+                    <select>
+                        <option value="">Select a Course...</option>
+                        <option value="1">HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">JavaScript</option>
+                    </select>
+                </form>
+                解析：第一欄為空值是因為要讓使用者自己選，而非預設。
+            b.預設選擇
+                    <select>
+                        <option value="">Select a Course...</option>
+                        <option value="1" selected>HTML</option>
+                        <option value="2">CSS</option>
+                        <option value="3">JavaScript</option>
+                    </select>
+            c.可複選
+                 <select multiple>
+                    <option value="1" selected>HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option>
+                </select>
+            d.選項團體
+                <select>
+                    <optgroup label="front-end Courses">
+                    <option value="1">HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JavaScript</option>
+                    </optgroup>
+                    <optgroup label="back-end Courses">
+                    <option value="1">Node.js</option>
+                    <option value="2">ASP.NET</option>
+                    <option value="3">Django</option>
+                    </optgroup>
+                </select>
+                解析：使user在選擇時，可以明確知道此為哪個父母階的子階。
+
+
+
+
+-->

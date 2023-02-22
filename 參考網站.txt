@@ -1,0 +1,136 @@
+1.圖片參考網站(免費)：
+    點陣圖： https://unsplash.com/
+            (不推薦) https://www.cssportal.com/image-to-data/ 如果不能用了，就去Google搜尋Data URI(或者URL) Generator。
+               優點：若電腦已有跑過網站或者擁有過檔案，就會使客戶端不會再重複下載同一個檔案，以增加客戶端的體驗與速度。
+                缺點：
+                a.轉換後的檔案，比內嵌檔案還大，因此沒有轉換的必要。
+                b.且只會把事情複雜化，因為如果要更換圖片，就得重新Generate一次
+                c.行動裝置的體驗大大降低，因為URL的載入會使得行動裝置的載入時間拉長，導致使用者體驗降低。
+                處理流程： 開啟網站 -> 上傳圖片 -> 把Image Tag下載下來 -> 貼上，即完成。
+    
+    向量圖： https://www.flaticon.com/
+        將大量的HTTP需求，集中到一個圖片中 https://cssspritestool.com/ *若此網站無法使用，可搜尋"CSS Sprites Generator"
+            使用流程：到網頁 -> 上傳圖片 -> Image File Type:PNG, CSS Class Prefix:bg- -> Generate CSS Sprite，即可下載，接著
+                -> 解壓縮 -> 將PNG放到專門蒐集圖片的資料夾 -> 並打開壓縮檔中的css檔，將其複製到自己的CSS檔 -> 接著，
+                並且變更url至自己電腦的路徑 -> span."圖片的class" -> 跑出圖片即完成。(這樣客戶端只會送出一個HTTP需求，減少伺服器與客戶端的下載負擔)
+    
+    向量背景圖片：https://www.svgbackgrounds.com/
+
+    字形圖標
+        Font Awesome https://fontawesome.com/ 我的kit:34a071c796 https://fontawesome.com/kits/34a071c796/setup?welcome=yes
+            處理流程： 開啟網站 -> 複製kit的script碼並貼到head裡 -> 回到網站查詢想要的圖片 -> 並複製其中的<i></i> -> 
+                        貼到body內 -> 並將i改成span(因i的用法已被棄用，span會更適合) -> 即完成。
+            參數解析：class="圖片名稱 fa-2x(FontAwesome的圖片2倍大)"
+        Ionicons https://ionic.io/ionicons
+        Material Design Icons https://pictogrammers.com/library/mdi/
+    
+    Filter(灰階、模糊等):https://developer.mozilla.org/en-US/docs/Web/CSS/filter 可以搜尋css filter function
+      處理流程：選擇一個filter效果 -> 複製程式碼到CSS內
+
+    解決不同設備，所看到的圖片大小問題：https://responsivebreakpoints.com/ 可以做到srcset和sizes效果。
+        處理流程： 開啟網站 -> Resolution 200~1400 -> Size step 50kb -> Maximum images 3~5 Quantity -> 上傳圖片 -> 下載、複製程式碼使其完成。
+    
+    圖片轉檔網站：
+        https://cloudconvert.com/jpg-to-webp 
+
+    剪接(圖片)：
+        https://bennettfeely.com/clippy/
+        處理流程： 開啟網站 -> 點選想要的圖形(或者調整到想要的) -> 底下的clip-path那行複製起來，貼到CSS 。
+
+    顏色選擇：
+        Google搜尋"colorpicker"
+        漸層程式碼產生器：https://cssgradient.io/
+
+    形狀程式碼參考：https://css-tricks.com/the-shapes-of-css/
+
+    轉場：
+        https://cubic-bezier.com/#.25,.1,.25,1
+        cubic-bezier()的參數可於網站中參考。
+        指令參考：transition: transform 0.5s cubic-bezier(網站的數值貼這裡);
+        處理流程：開啟網站 -> 調整好後 -> copy -> 完成。
+        如若還是不明白，請參考HTML&CSSPar2的2_5的Transformations,3DTransformations。
+
+
+
+
+2.影音
+    影音參考網站(免費)：
+        https://www.sketch.com/
+        https://www.pexels.com/zh-tw/
+        https://www.pexels.com/
+
+
+
+
+3.表單
+    表單修飾網站：
+        Milligram (目前最為推薦) 
+            a.網站網址：https://milligram.io/
+            b.處理流程： 開啟網站 -> 找到Usage -> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> ->
+                            並貼上至head即完成。
+        Bootstrap (次要推薦)
+            a.網站網址：https://getbootstrap.com/docs/5.3/getting-started/download/
+            b.CDN：Content Deliver Network
+            c.處理流程： 開啟網站 -> 複製CDN via jsDelivr的第一個 -> 把喜歡的樣式的class加到你要放的地方
+    
+    表單後端生成網站：
+        formspree.io (自動生成後端免費的)
+            a.帳號：lanzeuen52011@gmail.com
+            b.密碼：956956520Aa@2
+            c.處理流程： 
+                    I.使此處的前端連接到formspree的後端：
+                        開啟網站 -> 登入 -> 選擇"+"的圖示 -> form -> 輸入名稱 -> 複製Your form's endpoint is:的url -> 
+                        貼到form的action -> 在action=""的旁邊再加上method="post(或者get)" -> 
+                        在將input的部分新增name="(自己寫一個，如果是name就寫name)" -> 再去輸入資料並送出 -> 
+                        若跳出Thanks，即正常。
+                            ***其中post比較常用於表單，且會顯示在request，而get則用於查詢，會將資料放在url以便於定位。
+                    II.查看填寫資料
+                        開啟網站 -> 登入 -> 點選想查看的表單 -> 點選Submissions -> 可以看到誰填了
+
+
+
+
+
+
+4.字形、字體
+    字體下載網站(下載到本機)：
+        a.https://www.fontsquirrel.com/ (可在Webfont Generator將檔案壓縮成wof跟wof2.0)
+        b.fonts.com
+        c.myfonts.com
+
+    字形下載網站(從雲端載到客戶瀏覽器)
+        a.Google Web Font(https://fonts.google.com/)
+        處理流程：1.把想要的字形選好之後，把LINK複製貼到VSC.html的head裡面，能前面一點就前面一點，因為這個是要告訴網站先下載這個東西。
+                2.然後再去href裡面的網址，看他寫的font-family: 'Open Sans';，這樣直接到CSS裡面設定font-family: 'Open Sans';
+                3.可以在網址修改如果要增加字體就是"Roboto:wght@700"，"字體:wght@粗細"
+                4.display=swap改成display=optional
+        b.Adobe Font
+        c.fonts.com
+        d.fontdeck.con
+    字形搭配網站
+        a.https://www.fontpair.co/all ，可搭配Google Web Font使用。
+
+    字體大小視覺
+        A.https://typescale.com/ 可以直接查看字體大小的顯示成果。    
+
+    符號參考網站
+        HTML，https://tools.w3cub.com/html-entities
+
+5.上架網站：
+    https://git-scm.com/
+
+
+
+
+6.雜項
+    自動偵錯
+        1.HTML:可以到https://validator.w3.org/的 Validate by File Upload 上傳自己的檔案就可以偵錯了
+        2.CSS: https://jigsaw.w3.org/css-validator/
+
+    Normalize CSS參考網站：
+        https://necolas.github.io/normalize.css/
+
+    查看不同的瀏覽器是如何與HTML或CSS配合的：
+        https://caniuse.com/
+
+

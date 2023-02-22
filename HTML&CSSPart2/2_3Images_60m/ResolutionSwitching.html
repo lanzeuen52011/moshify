@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/NormalizeCSS.css" />
+    <link
+      rel="stylesheet"
+      href="/HTML&CSSPart2/2_3Images_60m/ ResolutionSwitching.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="/HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg"
+      alt="A bowl of salmon and curry"
+      class="meal"
+      srcset="
+        /HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg     400w,
+        /HTML&CSSPart2/2_3Images_60m/images/images/meal@2x.jpg  800w,
+        /HTML&CSSPart2/2_3Images_60m/images/images/meal@3x.jpg 1200w
+      "
+      sizes="
+        (max-width:500px) 100vw,
+        (max-width:700px) 50vw,
+        33vw
+      "
+    />
+  </body>
+</html>
+
+<!--
+Resolution Switching
+  1.Retina display
+      A.Iphone8 667*375
+      B.Ipad Pro 11" 1024*768
+      C.MacBook Pro 15" 1440*900
+  2.指令集
+    A.srcset
+        srcset="
+              /HTML&CSSPart2/2_3Images_60m/images/images/meal.jpg     400w,
+              /HTML&CSSPart2/2_3Images_60m/images/images/meal@2x.jpg  800w,
+              /HTML&CSSPart2/2_3Images_60m/images/images/meal@3x.jpg 1200w
+            "
+        解析：告訴瀏覽器這些圖片真正的邊長各為多少，讓瀏覽器自己去挑選最適合的。
+    B.sizes
+        sizes="
+              (max-width:500px) 100vw,
+              (max-width:700px) 50vw,
+              33vw
+              "
+        解析：使瀏覽器判斷最大邊長小於設定數值時，使用設定好的大小，如最大邊長小於500px時，顯示圖片的尺寸為100%。
+  3.參考網站：
+    A.https://responsivebreakpoints.com/ 可以做到以上效果。
+      Resolution 200~1400
+      Size step 50kb
+      Maximum images 3~5 Quantity
+      上傳圖片
+      下載下來、複製程式碼使其完成。
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+-->
