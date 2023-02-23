@@ -4,18 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/HTML&CSSPart3/CSS/NormalizeCSS.css" />
     <link rel="stylesheet" href="/HTML&CSSPart3/CSS/styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Heading1</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim
+      adipisci possimus doloribus nihil excepturi praesentium magni non ipsa
+      quidem!
+    </p>
+  </body>
 </html>
 
 <!--
 
-總體流程： 分好架構Identifying the Components -> 決定網站的主題顏色(三種)與文字的Heading、Body顏色 
+總體流程： 
+1.分好架構Identifying the Components -> 
+2.Color Palette做好調色盤，決定網站的主題顏色(三種)與文字的Heading、Body顏色 ->
+3.Typography文字排版(手機、電腦1024px)決定字型、字體大小、行高 ->
 
-Git
+
+壹、Git
 
   1.安裝好之後，先設定好Name跟Email
     A.git config --global user.name "FIRST_NAME LAST_NAME"
@@ -24,19 +43,39 @@ Git
       此次為：lanzeuen52011@gmail.com
 
   2.指令集：
-    A.initial repository 初始化git的紀錄
-    B.Define the color palette 定義調色盤
+    A.initial repository. 初始化git的紀錄
+    B.Define the color palette. 定義調色盤
+    C.Define the style for the fonts. 定義字形
     
 
 
-Identifying the Components 確認需要的成分(區塊與元素)
-  A.Modular CSS
-    a.解析：將CSS放入一個模組內，然後使其能夠重複利用。
+貳、Identifying the Components 確認需要的成分(區塊與元素)
+  1.Modular CSS
+    A.解析：將CSS放入一個模組內，然後使其能夠重複利用。
 
-Color Palette
-  A.Primary主要顏色 藍色(深藍色)
-  B.Secondary次要顏色 藍色(其他的藍色)
-  C.Accent其他顏色 橘色(除藍色以外其他顏色)
+參、Color Palette
+  1.Primary主要顏色 藍色(深藍色)
+  2.Secondary次要顏色 藍色(其他的藍色)
+  3.Accent其他顏色 橘色(除藍色以外其他顏色)
+    以上顏色設定好後，到git輸入Define the color palette.，即完成。
+    顏色程式碼例句：
+      :root{
+          --color-primary:#2584ff; 
+          --color-secondary:#00d9ff;
+          --color-accent:#ff3400;
+          --color-headings:#1b0760;
+          --color-body:#918ca4;
+      }
+
+肆、Typography排版
+  1.小技巧
+    A.縮寫：h${Heading$}*3會產生出以下：
+      <h1>Heading1</h1>
+      <h2>Heading2</h2>
+      <h3>Heading3</h3>
+    B.決定行高的時候，有可能會因g這類超過底部的字，而導致content增大，因此將margin縮小即可。
+    C.通常超過1024px的畫面，基本上就是桌電或筆電了。
+      @media screen and (min-width:1024px){}
 
 
 -->
