@@ -21,3 +21,11 @@ TODO Highlight
     在CSS /* TODO: */ 或者 /* FIXME: */，會有顏色可以註記。
 
 
+
+Git
+    安裝好之後，先設定好Name跟Email
+    git config --global user.name "FIRST_NAME LAST_NAME"
+    此次為：Ziyun Lan
+    git config --global user.email "MY_NAME@example.com"
+    此次為：lanzeuen52011@gmail.com
+
