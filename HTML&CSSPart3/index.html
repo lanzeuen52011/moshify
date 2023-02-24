@@ -14,7 +14,12 @@
     <link rel="stylesheet" href="/HTML&CSSPart3/CSS/styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <button class="button button--primary button--block" type="button">
+      BUY NOW
+    </button>
+    <a href="#" class="button button--primary button--block">Buy NOW</a>
+  </body>
 </html>
 
 <!--
@@ -27,6 +32,7 @@
 5.Badges徽章，將徽章的顏色連結到先前設定的Primary或者Secondary的設定，在設定用class來區分大小與CSS調整內容 ->
 6.List -> git輸入類似前面的東西，此次輸出 Define the lists.
 7.Icon 將多個圖片變成Sprite並調整顏色與大小 ->  Define the icons.
+8.Buttons
 
 
 壹、Git
@@ -102,6 +108,10 @@
         fill: var(--color-primary);
       }
 
+玖、Buttons
+  1.小技巧
+    A.因為a(錨點)他的sizingbox不是border，所以如果兩個要一起調整大小，需要先把所有物件都設定成box-sizing: border-box;
+    B.Button的屬性在於游標(cusor)滑過去(hover)時，游標不變，因此需要設定cursor: pointer;來讓游標完成變化。
 
 
 
