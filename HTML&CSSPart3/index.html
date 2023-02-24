@@ -14,13 +14,7 @@
     <link rel="stylesheet" href="/HTML&CSSPart3/CSS/styles.css" />
     <title>Document</title>
   </head>
-  <body>
-    <ul class="list list--tick">
-      <li class="list__item l">Item 1</li>
-      <li class="list__item l">Item 2</li>
-      <li class="list__item l">Item 3</li>
-    </ul>
-  </body>
+  <body></body>
 </html>
 
 <!--
@@ -31,7 +25,8 @@
 3.Typography文字排版(手機、電腦1024px)決定字型、字體大小、行高 -> Define the style for the fonts. ->
 4.Links連結排版，決定字形字體動畫等，將Link放入Link.html存放 -> Build the arrow link component.
 5.Badges徽章，將徽章的顏色連結到先前設定的Primary或者Secondary的設定，在設定用class來區分大小與CSS調整內容 ->
-6.List
+6.List -> git輸入類似前面的東西，此次輸出 Define the lists.
+7.Icon 將多個圖片變成Sprite並調整顏色與大小 ->  Define the icons.
 
 
 壹、Git
@@ -93,6 +88,19 @@
       A.list-style: none;
         解析：一開始先將List的布林點消除。
 
+捌、Icon
+  1.https://svgsprit.es/  svg sprite generator
+    將多個HTTP的需求轉成一個，將多個圖片轉成一個圖片檔。
+      解析：下載下來的檔案是.svg(XML)，類似於HTML。
+      處理流程： 開啟網站 -> 把要放一起的檔案全部一起拖入網站中 -> 下載 -> 並將其放到想要放的位置 -> 回到剛剛的網站，滾輪到最底下 ->
+                可以找到類似<svg class="icon">，將其複製到HTML內 -> 
+                  將<use xlink:href="#search"></use>的#search改成/HTML&CSSPart3/images/sprite.svg#wordpress -> 圖示即可展示。
+  2.指令集
+    A.fill:var()
+      解析：改變icon或者圖片顏色，使用此指令。
+      .icon--primary{
+        fill: var(--color-primary);
+      }
 
 
 

@@ -9,10 +9,19 @@
                 處理流程： 開啟網站 -> 上傳圖片 -> 把Image Tag下載下來 -> 貼上，即完成。
     
     向量圖： https://www.flaticon.com/
-        將大量的HTTP需求，集中到一個圖片中 https://cssspritestool.com/ *若此網站無法使用，可搜尋"CSS Sprites Generator"
+      
+            https://cssspritestool.com/    將大量的HTTP需求，集中到一個圖片中。
+            *若此網站無法使用，可搜尋"CSS Sprites Generator"
             使用流程：到網頁 -> 上傳圖片 -> Image File Type:PNG, CSS Class Prefix:bg- -> Generate CSS Sprite，即可下載，接著
                 -> 解壓縮 -> 將PNG放到專門蒐集圖片的資料夾 -> 並打開壓縮檔中的css檔，將其複製到自己的CSS檔 -> 接著，
                 並且變更url至自己電腦的路徑 -> span."圖片的class" -> 跑出圖片即完成。(這樣客戶端只會送出一個HTTP需求，減少伺服器與客戶端的下載負擔)
+            https://svgsprit.es/  svg sprite generator
+                將多個HTTP的需求轉成一個，將多個圖片轉成一個圖片檔。
+                解析：下載下來的檔案是.svg(XML)，類似於HTML。
+                處理流程： 開啟網站 -> 把要放一起的檔案全部一起拖入網站中 -> 下載 -> 並將其放到想要放的位置 -> 回到剛剛的網站，滾輪到最底下 ->
+                            可以找到類似<svg class="icon">，將其複製到HTML內 -> 
+                            將<use xlink:href="#search"></use>的#search改成/HTML&CSSPart3/images/sprite.svg#wordpress -> 圖示即可展示。
+
     
     向量背景圖片：https://www.svgbackgrounds.com/
 
