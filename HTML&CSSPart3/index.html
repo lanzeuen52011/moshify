@@ -30,8 +30,8 @@
 8.Buttons -> Define the button.
 9.Inputs -> Difine the input groups.
 10.Plan and Popular Badge -> Define the plan.
-11.Media Objects
-12.Quotes
+11.Media Objects -> Define Media
+12.Quotes -> Define Quotes
 
 
 
@@ -144,6 +144,21 @@
       inline元素。
     B.blockquote
       block元素。
+    C.前後引號
+    .quote__text::before{
+      content: open-quote;
+    }
+    .quote__text::after{
+      content: close-quote;
+    }
+    D..quote__line{
+        position: relative;
+        bottom: 10px;
+      }
+      原本的位置在新的位置的下方10個像素。
+
+
+
 
 
 
