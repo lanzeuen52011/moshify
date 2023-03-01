@@ -35,7 +35,7 @@
 13.Grids -> Define grid.
 14.Testimonials -> Define Testimonials.
 15.Callouts -> Define Callouts.
-16.
+16.Collapsibles -> Define Collapsibles.
 
 
 
@@ -166,13 +166,52 @@
 
 拾伍、Testimonials
 
-拾六、Callouts
+拾陸、Callouts
   1.小技巧
     A.justify-self: center; or align-self: center;
       調整grid的垂直or水平置中，預設是stretch。
 
+拾柒、Collapsibles 可折疊的
+  1.小技巧
+    A.收放動畫1 (要用到javascript的 main.js)
+      .collapsible__chevron{
+          transform: rotate(-90deg);
+          transition: transform 0.3s;
+      }
 
+      .collapsible__content{
+          display: none;
+      }
 
+      .collapsible--expanded .collapsible__chevron{
+          transform: rotate(0);
+      }
+
+      .collapsible--expanded .collapsible__content{
+          display: block;
+      }
+      
+    B.收放動畫2 (要用到javascript的 main.js)
+      .collapsible__chevron{
+          transform: rotate(-90deg);
+          transition: transform 0.3s;
+      }
+
+      .collapsible__content{
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: all 0.3s;
+      }
+
+      .collapsible--expanded .collapsible__chevron{
+          transform: rotate(0);
+      }
+
+      .collapsible--expanded .collapsible__content{
+          max-height: 100vh;
+          opacity: 1;
+      }
 
 
 
