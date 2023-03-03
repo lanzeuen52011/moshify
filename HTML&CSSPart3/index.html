@@ -15,6 +15,87 @@
     <title>Document</title>
   </head>
   <body>
+    <section class="block block--dark block--skewed-right block-showcase">
+      <header class="block__header">
+        <h2 class="block__heading">User-friendly Control Panel</h2>
+      </header>
+      <div class="container grid grid--1x2">
+        <picture class="block-showcase__image">
+          <source
+            type="image/webp"
+            srcset="
+              /HTML&CSSPart3/images/ipad@1x.webp 1x,
+              /HTML&CSSPart3/images/ipad@2x.webp 2x
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              /HTML&CSSPart3/images/ipad@1x.png 1x,
+              /HTML&CSSPart3/images/ipad@2x.png 2x
+            "
+          />
+          <img src="/HTML&CSSPart3/images/ipad@1x.png" alt="" />
+        </picture>
+        <ul class="list">
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary">
+                  <use xlink:href="/HTML&CSSPart3/images/sprite.svg#snap"></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">Staging, GIT & WP-CLI</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus facilis laborum distinctio, unde atque culpa eos
+                  natus autem architecto recusandae.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary">
+                  <use
+                    xlink:href="/HTML&CSSPart3/images/sprite.svg#growth"
+                  ></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">Easy Start & Managed Updates</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus facilis laborum distinctio, unde atque culpa eos
+                  natus autem architecto recusandae.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media">
+              <div class="media__image">
+                <svg class="icon icon--primary">
+                  <use
+                    xlink:href="/HTML&CSSPart3/images/sprite.svg#wordpress"
+                  ></use>
+                </svg>
+              </div>
+              <div class="media__body">
+                <h3 class="media__title">Dynamic Caching & More</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusamus facilis laborum distinctio, unde atque culpa eos
+                  natus autem architecto recusandae.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     <script src="/HTML&CSSPart3/js/main.js"></script>
   </body>
 </html>
@@ -43,7 +124,8 @@
 19.Hero and Optimizing Images -> Define Hero.
 20.Domain Block -> Define Domain Block.
 21.Plans Block -> Define Plans Block.
-
+22.Features Block -> Define Features Block.
+23.Showcase Block -> Define Showcase Block.
 
 
 
@@ -252,6 +334,23 @@
       當未來欄的數量會變動，可以auto-fit來自動生成，而若是每個方格要有多大的部分輸入1fr則會使此失效，因此需輸入minmax(100px,1fr)。
 
 貳拾參、 Plans Block
+
+貳拾肆、Features Block
+  1.小技巧
+    A.讓連續左右對調的，於偶數調換。
+    @media screen and (min-width:768px) {
+      .feature:nth-of-type(even) .feature__content{
+        order: 2;
+      }
+    }
+
+貳拾伍、Showcase Block
+  1.小技巧
+    A.圖片不回應
+      width: auto;
+    B.圖片回應
+      width: 100%;
+
 
 
 
