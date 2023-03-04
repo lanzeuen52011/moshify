@@ -560,6 +560,7 @@
 25.Footer -> Define Footer.
 26.Put it all together -> Layout issue
 27.Animations -> 驗證HTML跟CSS -> Dine a progress.
+28.NPM -> Add parcel for building.
 
 
 
@@ -855,12 +856,15 @@
       安裝parcel，WARN是很正常的不需要在意。 D的意思是Develment Dependencies，@1.12.4是指安裝1.12.4版本的，如果沒有@@1.12.4，則是安裝目前在地擁有的最新版本。
     C.node -v 
       查詢目前node版本
-    D.
+    D.使檔案位置變成localhost。
       I.node_modules/.bin/parcel index.html
         載入parcel到index.html內，這是只有安裝npm i -d parcel-bundler的情況下
       II.parcel index.html
         同上，這是有安裝npm i -g parcel-bundler的情況下
         **若有錯誤，可按看看儲存，此次發現此功能會慢，且是每次慢一個版本。
+      III.停止以上動作按Ctrl+C
+    E.parcel build ./HTMLCSSPart3/index.html
+        若出現tree.render is not a function，則在相同於index.html的資料夾內新增.htmlnanorc，其內容為 { "minifySvg": false } 。
       
   
 
