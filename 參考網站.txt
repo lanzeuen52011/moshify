@@ -59,6 +59,13 @@
         處理流程：開啟網站 -> 調整好後 -> copy -> 完成。
         如若還是不明白，請參考HTML&CSSPar2的2_5的Transformations,3DTransformations。
 
+    動畫(Animate):
+        https://michalsnik.github.io/aos/
+        解析：是一個會提供使用者滾動時，才讓物件看得見的動畫網站。
+        處理流程： 開啟網站 -> 開啟右上角的github.com -> 往下找到Installation -> Basic -> <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+                    -> 並放入head中 -> 再回到Installation底下 -> 將Add script right before closing的代碼加入body的結尾前 >
+                    並在想加入動畫的元素後面新增 data-aos="動畫名稱" -> 動畫名稱可從github底下的Animations找到 設定好即完成。
+
 
 
 
@@ -133,7 +140,7 @@
 
 6.雜項
     自動偵錯
-        1.HTML:可以到https://validator.w3.org/的 Validate by File Upload 上傳自己的檔案就可以偵錯了
+        1.HTML:可以到https://validator.w3.org/ 的Validate by File Upload 上傳自己的檔案就可以偵錯了
         2.CSS: https://jigsaw.w3.org/css-validator/
 
     Normalize CSS參考網站：
@@ -141,5 +148,7 @@
 
     查看不同的瀏覽器是如何與HTML或CSS配合的：
         https://caniuse.com/
+    SEO：
+        https://ogp.me/
 
 

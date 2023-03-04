@@ -3,3 +3,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
     /> <!--自動修飾(表單)-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+    <meta property="og:title" content="Moshify..." /> <!--告訴搜尋引擎此網頁的title-->
+    <meta property="og:description" content="Moshify..." /> <!--告訴搜尋引擎此網頁的desc-->
+    <meta property="og:type" content="website" /> <!--告訴搜尋引擎此網頁的類型-->
+    <meta property="og:image" content="http://" /> <!--告訴搜尋引擎此網頁的image-->
+    <meta property="og:url" content="http://matt.com" /> <!--告訴搜尋引擎此網頁的網頁地址在哪-->
+    <meta
+      name="description"
+      content="Deploy your website in less thant 60 seconds."
+    /> <!--使搜尋引擎搜尋到時，使用者可看到此description-->
