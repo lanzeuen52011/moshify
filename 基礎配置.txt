@@ -1,4 +1,4 @@
-    <link rel="stylesheet" href="/NormalizeCSS.css" /> <!--一般的CSS編輯-->
+    <link rel="stylesheet" href="/NormalizeCSS.css" /> <!--一般的CSS編輯，建議合併在其他的CSS檔案內，使用@import './NormalizeCSS.css';來優化網站-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"

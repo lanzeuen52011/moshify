@@ -31,6 +31,9 @@
                         貼到body內 -> 並將i改成span(因i的用法已被棄用，span會更適合) -> 即完成。
             參數解析：class="圖片名稱 fa-2x(FontAwesome的圖片2倍大)"
         Ionicons https://ionic.io/ionicons
+        Boxicons https://boxicons.com/
+            處理流程： 開啟網站 -> Github -> 找到Instead of installing you may use the remote version -> 並將其中第二個的link複製到自己的header
+                        -> 
         Material Design Icons https://pictogrammers.com/library/mdi/
     
     Filter(灰階、模糊等):https://developer.mozilla.org/en-US/docs/Web/CSS/filter 可以搜尋css filter function
@@ -42,14 +45,14 @@
     圖片轉檔網站：
         https://cloudconvert.com/jpg-to-webp 
 
-    剪接(圖片)：
-        https://bennettfeely.com/clippy/
-        處理流程： 開啟網站 -> 點選想要的圖形(或者調整到想要的) -> 底下的clip-path那行複製起來，貼到CSS 。
-
     顏色選擇：
         Google搜尋"colorpicker"
         漸層程式碼產生器：https://cssgradient.io/
 
+    剪接形狀(圖片)：
+        https://bennettfeely.com/clippy/
+        處理流程： 開啟網站 -> 點選想要的圖形(或者調整到想要的) -> 底下的clip-path那行複製起來，貼到CSS 。
+        
     形狀程式碼參考：https://css-tricks.com/the-shapes-of-css/
 
     轉場：
@@ -133,12 +136,42 @@
         HTML，https://tools.w3cub.com/html-entities
 
 5.上架網站：
-    https://git-scm.com/
+    github(步驟存取)
+        https://github.com/
+        處理流程： 開啟網站 -> 登入 -> 右上角的+ -> New repository -> name的那一欄一定要填 -> 送出 -> 複製第二個程式碼，丟到終端 ->
+                    日後每天要更新則用 git push。
+
+    netlify(網站上架)
+      參考網址：https://www.netlify.com/
+      處理流程： 開啟網站 -> 登入 -> Sites -> New site from Git -> 往下找Github -> (第一次要授權) -> install -> 然後回到New site from Git的頁面
+                -> 選Github -> 往下找到自己要選的(moshify) -> Build Command:parcel build index.html, Publish directory:dist
+                -> Deploy Site -> 會自動到site overview -> site setting -> custom domain -> option -> edit site name -> 
+                然後到Deploy確認是否已經可以瀏覽 -> 即完成。
+    
+    Measure page quality - web.dev (網站表現評分)
+    A.https://web.dev/measure/
+      解析：此為測試網站的表現評分。
+      處理流程： 開啟網站 -> 往下找到Enter a web page URL -> 點選RUN AUDIT -> 看到評分即完成。
+      建議：可將想比較的網站類型一同來評分，並且改善或者超越。但是並非此網站給的所有意見都要納入。
+
+
+6.API
+    SuperHero API
+        參考網址：https://www.superheroapi.com/
+            使用流程： 開啟網頁 -> 把Getting your Access Token的碼複製起來 -> 往下到/id -> 點選here，並找出自己想要的 -> 
+            再將https://superheroapi.com/api/自己access-token/id/剛剛找到的id -> 輸入到瀏覽器，即可獲得狀態。
+
+            放到js中的流程：將https://superheroapi.com/api/自己access-token/id/剛剛找到的id -> 轉換成
+                https://superheroapi.com/api.php/自己access-token/剛剛找到的id
+        參考網址：https://rapidapi.com/hub
+            使用流程：開啟網站 -> 找到想要的API -> 改成自己需要的程式碼 -> 貼到自己的檔案
 
 
 
 
-6.雜項
+
+
+7.雜項
     自動偵錯
         1.HTML:可以到https://validator.w3.org/ 的Validate by File Upload 上傳自己的檔案就可以偵錯了
         2.CSS: https://jigsaw.w3.org/css-validator/

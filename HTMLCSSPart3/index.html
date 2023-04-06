@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/HTMLCSSPart3/CSS/NormalizeCSS.css" />
     <link rel="stylesheet" href="/HTMLCSSPart3/CSS/styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta property="og:title" content="Moshify..." />
@@ -27,7 +26,7 @@
   <body>
     <header>
       <nav class="nav collapsible">
-        <a class="nav__brand" href="/">
+        <a aria-label="Moshify" class="nav__brand" href="/">
           <img src="/HTMLCSSPart3/images/logo.svg" alt="" />
         </a>
         <svg class="icon icon--white nav__toggler">
@@ -85,6 +84,7 @@
       </header>
       <div class="input-group box-shadow">
         <input
+          aria-label="Domain"
           type="text"
           class="input"
           placeholder="Enter domain name here..."
@@ -199,7 +199,7 @@
             consequatur adipisci illum aliquid sequi, libero animi eos
             accusantium odio aliquam!
           </p>
-          <a href="#" class="link-arrow">Lean More</a>
+          <a href="#" class="link-arrow">Learn More</a>
         </div>
         <picture data-aos="zoom-in-left">
           <source
@@ -563,7 +563,6 @@
 28.NPM -> Add parcel for building.
 
 
-
 壹、Git
 
   1.安裝好之後，先設定好Name跟Email
@@ -576,6 +575,12 @@
     A.initial repository. 初始化git的紀錄
     B.Define the color palette. 定義調色盤
     C.Define the style for the fonts. 定義字形
+    D.刪除git檔案：先輸入 "git rm 檔案名稱" 再輸入 "git add 檔案名稱" ，再使用 "git ls-files"來確認是否已刪除。
+    E.ls或者git ls-files 可以看到檔案目錄
+    F."mv 原檔名 新檔名"重新命名，之後必續將新檔與舊檔各用一次add， "git add 原檔名"和 "git add 新檔"，原理是因為mv指令是使用刪除舊檔生新檔，盡量在每一步都用 git status來確認。
+    G. ".gitignore" -> "code gitignore" 讓git無視的檔案位置加到gitignore內。
+    H. 遇到不會的就直接加上-h，例如：git rm -h
+    I.git rm --cache -r 檔案位置 ，可以將不該被追蹤的檔案從staged(ls-files)中刪除，而不刪除真正的檔案。
     
 
 
@@ -852,8 +857,9 @@
   3.NPM的使用方式(指令請在終端(terminal)輸入)
     A.npm init -y
       初始化package，會產生出新的package.json，內容有網站的資料。
-    B.npm i -D parcel-bundler@1.12.4 (如果無法安裝就把"devDependencies"移動到"license"底下)
+    B.npm i -D parcel-bundler(如果無法安裝就把"devDependencies"移動到"license"底下)
       安裝parcel，WARN是很正常的不需要在意。 D的意思是Develment Dependencies，@1.12.4是指安裝1.12.4版本的，如果沒有@@1.12.4，則是安裝目前在地擁有的最新版本。
+      可以將MOSH教的HTML資料夾把node_modules複製過來，並且新增deasync資料夾在node_modules底下。
     C.node -v 
       查詢目前node版本
     D.使檔案位置變成localhost。
@@ -865,7 +871,40 @@
       III.停止以上動作按Ctrl+C
     E.parcel build ./HTMLCSSPart3/index.html
         若出現tree.render is not a function，則在相同於index.html的資料夾內新增.htmlnanorc，其內容為 { "minifySvg": false } 。
-      
+
+  參拾參、Pushing to GitHub
+    1.Github
+      A.https://github.com/
+        處理流程： 開啟網站 -> 登入 -> 右上角的+ -> New repository -> name的那一欄一定要填 -> 送出 -> 複製第二個程式碼，丟到終端 ->
+                日後每天要更新則用 git push。
+      B.如果有說某項git裡的檔案太大可使用此指令
+        I.git filter-branch --force --index-filter "git rm --cached --ignore-unmatch 檔案名稱 -r" -- --all
+        II.git rm --cached HTMLCSSPart3/HTMLCSSPart3/folder/Moshify/Moshify/psd/mobile.psd
+          https://blog.darkthread.net/blog/rm-files-from-git-history/
+
+  參拾肆、Deployment
+    1.netlify
+      參考網址：https://www.netlify.com/
+      處理流程： 開啟網站 -> 登入 -> Sites -> New site from Git -> 往下找Github -> (第一次要授權) -> install -> 然後回到New site from Git的頁面
+                -> 選Github -> 往下找到自己要選的(moshify) -> Build Command:parcel build index.html, Publish directory:dist
+                -> Deploy Site -> 會自動到site overview -> site setting -> Domain management -> Production domains -> option -> edit site name -> 
+                然後到Deploy確認是否已經可以瀏覽 -> 即完成。
+      更新網站： VSC(git push) -> 自動重建新的網站(在Deploy看得到) -> 即完成。 直接點Deploy本身可以看到網站是否正常上傳與其程式碼(log)
+    
+
+參拾伍、Measuring the Site's Performance
+  1.Measure page quality - web.dev
+    A.https://web.dev/measure/
+      解析：此為測試網站的表現評分。
+      處理流程： 開啟網站 -> 往下找到Enter a web page URL -> 點選RUN AUDIT -> 看到評分即完成。
+      建議：可將想比較的網站類型一同來評分，並且改善或者超越。但是並非此網站給的所有意見都要納入。
+    
+    B.將此功能加入chrome擴充軟體
+      lighthouse
+      搜尋：chrome store light house
+      https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk/related
+      處理流程： 開啟網站 -> 安裝 -> 去到檢查(devtool) -> 在Element,Console,Sources那一欄尋找Lighthouse -> 即完成。(若未上傳會得到類似無法搜尋的回報，無視即可)
+
   
 
 

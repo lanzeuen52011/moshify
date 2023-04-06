@@ -23,9 +23,17 @@ TODO Highlight
 
 
 Git
+    https://git-scm.com/
     安裝好之後，先設定好Name跟Email
     git config --global user.name "FIRST_NAME LAST_NAME"
     此次為：Ziyun Lan
     git config --global user.email "MY_NAME@example.com"
     此次為：lanzeuen52011@gmail.com
+
+
+ lighthouse
+      搜尋：chrome store light house
+      https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk/related
+      處理流程： 開啟網站 -> 安裝 -> 去到檢查(devtool) -> 在Element,Console,Sources那一欄尋找Lighthouse -> 即完成。(若未上傳會得到類似無法搜尋的回報，無視即可)
+
 

