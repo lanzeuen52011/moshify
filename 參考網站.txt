@@ -22,6 +22,8 @@
                             可以找到類似<svg class="icon">，將其複製到HTML內 -> 
                             將<use xlink:href="#search"></use>的#search改成/HTML&CSSPart3/images/sprite.svg#wordpress -> 圖示即可展示。
 
+    Gif:
+        loading:https://loading.io/
     
     向量背景圖片：https://www.svgbackgrounds.com/
 
@@ -44,6 +46,9 @@
     
     圖片轉檔網站：
         https://cloudconvert.com/jpg-to-webp 
+
+        png to webp不限制，有轉換跑不完的重新上傳即可。
+        https://anyconv.com/tw/png-zhuan-webp/
 
     顏色選擇：
         Google搜尋"colorpicker"
