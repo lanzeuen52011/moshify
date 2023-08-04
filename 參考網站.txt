@@ -9,6 +9,7 @@
                 處理流程： 開啟網站 -> 上傳圖片 -> 把Image Tag下載下來 -> 貼上，即完成。
     
     向量圖： https://www.flaticon.com/
+            https://www.reshot.com/free-svg-icons/arrow/
       
             https://cssspritestool.com/    將大量的HTTP需求，集中到一個圖片中。
             *若此網站無法使用，可搜尋"CSS Sprites Generator"
@@ -74,6 +75,10 @@
                     -> 並放入head中 -> 再回到Installation底下 -> 將Add script right before closing的代碼加入body的結尾前 >
                     並在想加入動畫的元素後面新增 data-aos="動畫名稱" -> 動畫名稱可從github底下的Animations找到 設定好即完成。
 
+    網站即時調色工具：
+        https://realtimecolors.com/
+        解析：是一個提供使用者直接對網站調色的工具，可以在上面調完色之後再拿來自己的網站使用
+        處理流程：開啟網站 -> 使用下方的調色盤，或者使用骰子 -> 做出自己喜歡的樣式後，按Export，就可以從中找到配色為何，就可以拿來使用了
 
 
 
@@ -82,6 +87,11 @@
         https://www.sketch.com/
         https://www.pexels.com/zh-tw/
         https://www.pexels.com/
+
+        Oracle
+
+        elastic(需要篩選查詢的就需要此，查詢速度超快)
+        https://www.elastic.co/
 
 
 
