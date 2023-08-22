@@ -10,6 +10,11 @@
     
     向量圖： https://www.flaticon.com/
             https://www.reshot.com/free-svg-icons/arrow/
+            https://lordicon.com/icons
+            https://lottiefiles.com/animation/icon
+            https://icons8.com/icons/set/popular
+            https://iconscout.com/
+            https://useanimations.com/#explore
       
             https://cssspritestool.com/    將大量的HTTP需求，集中到一個圖片中。
             *若此網站無法使用，可搜尋"CSS Sprites Generator"
@@ -23,8 +28,18 @@
                             可以找到類似<svg class="icon">，將其複製到HTML內 -> 
                             將<use xlink:href="#search"></use>的#search改成/HTML&CSSPart3/images/sprite.svg#wordpress -> 圖示即可展示。
 
+    向量圖繪製：https://bgjar.com/
+    將任何圖片轉成SVG(AI工具)：https://vectorizer.ai/
+    圖片用AI：
+        集合大全：https://banmer.notion.site/banmer/47d72c168b8940908e98a6164027f3c0?v=8382092a39e4456d8a87cfa9f7b428fa
+        產圖工具：https://clipdrop.co/
+        浮水印移除：https://www.watermarkremover.io/zh
+
+        移除浮水印：https://www.watermarkremover.io/zh
+
     Gif:
-        loading:https://loading.io/
+        loading(gif):https://loading.io/
+        loading(code):https://loading.io/spinner/
     
     向量背景圖片：https://www.svgbackgrounds.com/
 
@@ -80,6 +95,13 @@
         解析：是一個提供使用者直接對網站調色的工具，可以在上面調完色之後再拿來自己的網站使用
         處理流程：開啟網站 -> 使用下方的調色盤，或者使用骰子 -> 做出自己喜歡的樣式後，按Export，就可以從中找到配色為何，就可以拿來使用了
 
+    背景產生工具：
+        https://meshgradient.in/
+        https://www.photoroom.com/zh-tw
+        https://coolbackgrounds.io/
+        https://haikei.app/
+        https://superdesigner.co/tools/backgrounds?type=side-wave
+        https://bgjar.com/
 
 
 2.影音
@@ -134,10 +156,18 @@
 
     字形下載網站(從雲端載到客戶瀏覽器)
         a.Google Web Font(https://fonts.google.com/)
-        處理流程：1.把想要的字形選好之後，把LINK複製貼到VSC.html的head裡面，能前面一點就前面一點，因為這個是要告訴網站先下載這個東西。
-                2.然後再去href裡面的網址，看他寫的font-family: 'Open Sans';，這樣直接到CSS裡面設定font-family: 'Open Sans';
-                3.可以在網址修改如果要增加字體就是"Roboto:wght@700"，"字體:wght@粗細"
-                4.display=swap改成display=optional
+            處理流程：1.把想要的字形選好之後，把LINK複製貼到VSC.html的head裡面，能前面一點就前面一點，因為這個是要告訴網站先下載這個東西。
+                    2.然後再去href裡面的網址，看他寫的font-family: 'Open Sans';，這樣直接到CSS裡面設定font-family: 'Open Sans';
+                    3.可以在網址修改如果要增加字體就是"Roboto:wght@700"，"字體:wght@粗細"
+                    4.display=swap改成display=optional
+
+            網路推薦的英文字體：
+                1. Unbounded
+                2. Quick Sand
+                3. Space Grotesk
+                4. Prompt
+                5. Playfair Display
+                6. Lexend
         b.Adobe Font
         c.fonts.com
         d.fontdeck.con
@@ -149,6 +179,8 @@
 
     符號參考網站
         HTML，https://tools.w3cub.com/html-entities
+
+    文字AI大合集：https://logicballs.com/
 
 5.上架網站：
     github(步驟存取)
@@ -202,5 +234,29 @@
     日期轉換：
         Day.js 官網 : https://day.js.org/en/
 		"post_date": 1631608299879 日期格式轉換可使用 dayjs(1631608299879).format('YYYY/MM/DD')
+
+    可用網站：https://splidejs.com/
+
+    API推薦
+        1.Sazam
+        2.Weather
+        3.Text-to-Speech
+        4.AI Art Maker
+        5.Amazon API
+        6.Love Calculator
+
+    參考各大品牌APP的設計
+        screenlane(下載下來後，配合Figma)：https://screenlane.com/
+
+8.AI工具
+
+    1.Tango 
+    2.crisp ai 
+    3.PDF ai 
+    4.adcopy ai 
+    4.web io 
+    6. Stockhimg 
+    7. Uzardio
+
 
 
