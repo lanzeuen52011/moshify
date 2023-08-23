@@ -257,6 +257,10 @@
     4.web io 
     6. Stockhimg 
     7. Uzardio
+    8.上字幕AI https://www.flexclip.com/tw/
+
+9.UI/UX
+    框架：https://antdv.com/docs/vue/getting-started
 
 
 
